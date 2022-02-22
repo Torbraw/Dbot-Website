@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+:fr:
+## General concept of the game
+The purpose of the game is to get the best items possible and get to the top of the rankings.
 
-You can use the [editor on GitHub](https://github.com/Torbraw/dbot-website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Players
+Your player has 2 statistics: attack and health. You start your journey with 20 attack and 100 health.
+Attack is used for attacking monster.
+Health is not used at the moment.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Items
+How to get items:
+- Play the slot machine every 2 hours
+- Drop an item from a monster you attacked
+- Buy from the marketplace.
+When you got some items, you can equip those to boost your statistics.
 
-### Markdown
+### Currencies
+You obtains coins every time you win at slot and when attacking a monster. You can also sell items to obtain some.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Monsters
+Monsters spawns randomly in the dedicated pve channel. You can attack a monster only one time and when he dies, each person who hit it has a chance to loot an item.
 
-```markdown
-Syntax highlighted code block
+### Fonctionnalités futures
+Voici les prochaines fonctionnalités sur lesquelles je prévois de travailler (non définitives) :
+- Enchantements d'objets
+- Marché où le joueur peut vendre ses items
+- Classements
+- PVP
+- Ajout de Mana avec certains sorts
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Torbraw/dbot-website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### Disclaimer
+The bot is currently in Alpha, meaning everything can be wiped out & changed. New features will slowly rolls out. You are more than welcome to give me some feedback.
