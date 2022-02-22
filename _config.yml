@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
 title: Dbot Website
+theme: jekyll-theme-cayman
+show_downloads: false
 description: Dbot is a RPG bot where you can slay monsters, loot items, play slot & more.
