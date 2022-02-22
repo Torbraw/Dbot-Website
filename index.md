@@ -1,4 +1,4 @@
-:us:
+ENGLISH
 ```markdown
 ## General concept of the game
 The purpose of the game is to get the best items possible and get to the top of the rankings.
@@ -32,7 +32,7 @@ Here's the next features I plan on working on (not final):
 #### Disclaimer
 The bot is currently in Alpha, meaning everything can be wiped out & changed. New features will slowly rolls out. You are more than welcome to give me some feedback.
 ```
-:fr:
+FRANÇAIS
 ```markdown
 ## Concept général du jeu
 Le but du jeu est d'obtenir les meilleurs items possibles et d'atteindre le sommet du classement.
