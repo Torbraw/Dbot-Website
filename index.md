@@ -32,6 +32,9 @@ Here's the next features I plan on working on (not final):
 #### Disclaimer
 The bot is currently in Alpha, meaning everything can be wiped out & changed. New features will slowly rolls out. You are more than welcome to give me some feedback.
 
+#### Contact me
+If you want to join the Dbot server to try it out or maybe add the bot to your server, send me a DM on discord: **Torbraw#7689**
+
 # FRANÇAIS
 
 ## Concept général du jeu
@@ -65,3 +68,6 @@ Voici les prochaines fonctionnalités sur lesquelles je prévois de travailler (
 
 #### Avertissement
 Le bot est actuellement en version alpha, ce qui signifie que tout peut être effacé et modifié. De nouvelles fonctionnalités seront progressivement déployées. Vous êtes plus que bienvenu pour me faire part de vos commentaires.
+
+#### Contactez-moi
+Si vous souhaitez rejoindre le serveur Dbot pour l'essayer ou peut-être ajouter le bot à votre serveur, envoyez moi un DM sur discord: **Torbraw#7689**
