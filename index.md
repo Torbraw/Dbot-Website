@@ -4,7 +4,7 @@
 The purpose of the game is to get the best items possible and get to the top of the rankings.
 
 ### Players
-Your player has 2 statistics: attack and health. You start your journey with 20 attack and 100 health.
+The player has 2 statistics: attack and health. You start your journey with 20 attack and 100 health.
 Attack is used for attacking monster.
 Health is not used at the moment.
 
@@ -13,6 +13,7 @@ How to get items:
 - Play the slot machine every 2 hours
 - Drop an item from a monster you attacked
 - Buy from the marketplace.
+
 When you got some items, you can equip those to boost your statistics.
 
 ### Currencies
@@ -24,8 +25,7 @@ Monsters spawns randomly in the dedicated pve channel. You can attack a monster 
 ### Future features
 Here's the next features I plan on working on (not final):
 - Items enchantments
-- Marketplace where user can sell their items
-- Rankings
+- ~~Rankings~~
 - PVP
 - Add Mana with some spells
 
@@ -41,7 +41,7 @@ If you want to join the Dbot server to try it out or maybe add the bot to your s
 Le but du jeu est d'obtenir les meilleurs items possibles et d'atteindre le sommet du classement.
 
 ### Joueurs
-Votre joueur a 2 statistiques : l'attaque et la santé. Vous commencez votre aventure avec 20 d'attaque et 100 de santé.
+Le joueur a 2 statistiques : l'attaque et la santé. Vous commencez votre aventure avec 20 d'attaque et 100 de santé.
 L'attaque est utilisée pour attaquer un monstre.
 La santé n'est pas utilisée pour le moment.
 
@@ -50,6 +50,7 @@ Comment obtenir des items:
 - Jouez à la machine à sous toutes les 2 heures
 - Obtenir un objet d'un monstre que vous avez attaqué
 - Achetez sur le marché.
+
 Lorsque vous avez des items, vous pouvez les équiper pour booster vos statistiques.
 
 ### Monnaies
@@ -61,8 +62,7 @@ Les monstres apparaissent au hasard dans le canal pve dédié. Vous ne pouvez at
 ### Fonctionnalités futures
 Voici les prochaines fonctionnalités sur lesquelles je prévois de travailler (non définitives) :
 - Enchantements d'objets
-- Marché où le joueur peut vendre ses items
-- Classements
+- ~~Classements~~
 - PVP
 - Ajout de Mana avec certains sorts
 
