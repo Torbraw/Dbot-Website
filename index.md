@@ -22,18 +22,15 @@ You obtains coins every time you win at slot and when attacking a monster. You c
 ### Monsters
 Monsters spawns randomly in the dedicated pve channel. You can attack a monster only one time and when he dies, each person who hit it has a chance to loot an item.
 
-### Future features
-Here's the next features I plan on working on (not final):
-- Items enchantments
-- ~~Rankings~~
-- PVP
-- Add Mana with some spells
+### Enchantment
+You obtain enchant gems every time you win at slot and when attacking a monster. You can use those gems to try and enchant your items to boost their statistics. There are 2 tier of enchants for every item and are represented by either * or ** at the end of the name depending on the tier.
 
 #### Disclaimer
 The bot is currently in Alpha, meaning everything can be wiped out & changed. New features will slowly rolls out. You are more than welcome to give me some feedback.
 
 #### Contact me
-If you want to join the Dbot server to try it out or maybe add the bot to your server, send me a DM on discord: **Torbraw#7689**
+If you want to add the bot to your server or just talk to me, send me a DM on discord: **Torbraw#7689**
+Dbot discord server: https://discord.gg/F3sdzR5Nx3
 
 # FRANÇAIS
 
@@ -59,15 +56,12 @@ Vous obtenez des pièces à chaque fois que vous gagnez à la machine à sous et
 ### Monstres
 Les monstres apparaissent au hasard dans le canal pve dédié. Vous ne pouvez attaquer un monstre qu'une seule fois et lorsqu'il meurt, chaque personne qui l'a frappé a une chance d'obtenir un item.
 
-### Fonctionnalités futures
-Voici les prochaines fonctionnalités sur lesquelles je prévois de travailler (non définitives) :
-- Enchantements d'objets
-- ~~Classements~~
-- PVP
-- Ajout de Mana avec certains sorts
+### Enchantment
+Vous obtenez des gemmes d'enchantement à chaque fois que vous gagnez à la machine à sous et lorsque vous attaquez un monstre. Vous pouvez utiliser ces gemmes pour essayer d'enchanter vos items afin d'augmenter leurs statistiques. Il existe 2 niveaux d'enchantements pour chaque item et sont représentés par * ou ** à la fin du nom selon le niveau.
 
 #### Avertissement
 Le bot est actuellement en version alpha, ce qui signifie que tout peut être effacé et modifié. De nouvelles fonctionnalités seront progressivement déployées. Vous êtes plus que bienvenu pour me faire part de vos commentaires.
 
 #### Contactez-moi
-Si vous souhaitez rejoindre le serveur Dbot pour l'essayer ou peut-être ajouter le bot à votre serveur, envoyez moi un DM sur discord: **Torbraw#7689**
+Si vous souhaitez ajouter le bot à votre serveur ou simplement me parler, envoyez moi un DM sur discord: **Torbraw#7689**
+Serveur discord Dbot: https://discord.gg/F3sdzR5Nx3
