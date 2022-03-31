@@ -1,3 +1,6 @@
+Temporary ugly site for the moment 🙂
+Site moche temporaire pour le moment 🙂
+
 # ENGLISH
 
 ## General concept of the game
@@ -6,7 +9,7 @@ The purpose of the game is to get the best items possible and get to the top of 
 ### Players
 The player has 2 statistics: attack and health. You start your journey with 20 attack and 100 health.
 Attack is used for attacking monster.
-Health is not used at the moment.
+Health is used for the pvp.
 
 ### Items
 How to get items:
@@ -21,6 +24,10 @@ You obtains coins every time you win at slot and when attacking a monster. You c
 
 ### Monsters
 Monsters spawns randomly in the dedicated pve channel. You can attack a monster only one time and when he dies, each person who hit it has a chance to loot an item.
+
+### Pvp
+You can challenge other players to a turn-based pvp battle. Each player can choose between 4 actions and the one who get to 0 health loose. The winner gains coins, enchant gems & blood coins.
+Blood coins are used to buy exclusive pvp items & augmented drop chance for slot.
 
 ### Enchantment
 You obtain enchant gems every time you win at slot and when attacking a monster. You can use those gems to try and enchant your items to boost their statistics. There are 2 tier of enchants for every item and are represented by either * or ** at the end of the name depending on the tier.
@@ -40,7 +47,7 @@ Le but du jeu est d'obtenir les meilleurs items possibles et d'atteindre le somm
 ### Joueurs
 Le joueur a 2 statistiques : l'attaque et la santé. Vous commencez votre aventure avec 20 d'attaque et 100 de santé.
 L'attaque est utilisée pour attaquer un monstre.
-La santé n'est pas utilisée pour le moment.
+La santé est utilisée pour le pvp.
 
 ### Items
 Comment obtenir des items:
@@ -55,6 +62,10 @@ Vous obtenez des pièces à chaque fois que vous gagnez à la machine à sous et
 
 ### Monstres
 Les monstres apparaissent au hasard dans le canal pve dédié. Vous ne pouvez attaquer un monstre qu'une seule fois et lorsqu'il meurt, chaque personne qui l'a frappé a une chance d'obtenir un item.
+
+###Pvp
+Vous pouvez défier d'autres joueurs dans une bataille pvp au tour par tour. Chaque joueur peut choisir entre 4 actions et celui qui atteint 0 de santé perd. Le gagnant gagne des pièces, des gemmes d'enchantement et des pièces de sang.
+Les pièces de sang sont utilisées pour acheter des objets pvp exclusifs et augmenter les chances de drop pour la machie à sous.
 
 ### Enchantment
 Vous obtenez des gemmes d'enchantement à chaque fois que vous gagnez à la machine à sous et lorsque vous attaquez un monstre. Vous pouvez utiliser ces gemmes pour essayer d'enchanter vos items afin d'augmenter leurs statistiques. Il existe 2 niveaux d'enchantements pour chaque item et sont représentés par * ou ** à la fin du nom selon le niveau.
