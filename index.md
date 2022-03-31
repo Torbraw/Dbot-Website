@@ -1,4 +1,4 @@
-Temporary ugly site for the moment 🙂
+Temporary ugly site for the moment 🙂<br />
 Site moche temporaire pour le moment 🙂
 
 # ENGLISH
