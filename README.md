@@ -1,3 +1,3 @@
-# Dbot-Website
-Dbot Website
-https://torbraw.github.io/dbot-website/
+# dbot-website
+
+Web site for the Dbot discord bot
