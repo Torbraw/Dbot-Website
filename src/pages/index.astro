@@ -1,7 +1,11 @@
 ---
+import { changeLanguage } from 'i18next';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CLOUDFRONT_BASE_URL } from '../const';
 import GradientText from '../components/GradientText.astro';
+import { Trans } from 'astro-i18next/components';
+
+await changeLanguage('en');
 ---
 
 <BaseLayout title="Dbot - RPG discord bot">
@@ -12,6 +16,7 @@ import GradientText from '../components/GradientText.astro';
         <div class="text-center text-8xl font-extrabold tracking-tighter text-primary">
           <GradientText text="Dbot RPG Discord Bot" />
         </div>
+        <Trans i18nKey="test">&nbsp;</Trans>
       </h2>
     </div>
   </section>
