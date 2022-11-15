@@ -1,6 +1,8 @@
 ---
 import { changeLanguage } from 'i18next';
-import TitleScreen from '../../components/title-screen.astro';
+import Features from '../../components/index/features.astro';
+import Intro from '../../components/index/intro.astro';
+import TitleScreen from '../../components/index/title-screen.astro';
 import BaseLayout from '../../layouts/base-layout.astro';
 
 await changeLanguage('en');
@@ -8,4 +10,8 @@ await changeLanguage('en');
 
 <BaseLayout title="Dbot - RPG discord bot">
   <TitleScreen />
+  <div class="space-y-24 px-8 py-32">
+    <Intro />
+    <Features />
+  </div>
 </BaseLayout>

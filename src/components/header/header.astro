@@ -1,21 +1,24 @@
 ---
 import type { NavItem } from '../../types';
 import { t } from 'i18next';
+import i18next from 'i18next';
 import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../const';
 import Link from '../common/link.astro';
 import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
 import './header.css';
 
+const currentLanguage = i18next.language;
+
 const navItems: Array<NavItem> = [
-  { title: t('header:documentation'), url: 'docs' },
-  { title: t('header:encyclopedia'), url: 'encyclopedia' },
+  { title: t('header:documentation'), url: `/${currentLanguage}/docs` },
+  { title: t('header:encyclopedia'), url: `/${currentLanguage}/encyclopedia` },
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4"
 >
   <Link href="/">
     <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
