@@ -1,12 +1,4 @@
----
-export interface Props {
-  text: string;
-}
-
-const { text } = Astro.props;
----
-
-<span>{text}</span>
+<span><slot /></span>
 
 <style>
   span {

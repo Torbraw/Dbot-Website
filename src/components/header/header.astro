@@ -1,0 +1,76 @@
+---
+import type { NavItem } from '../../types';
+import { t } from 'i18next';
+import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../const';
+import { Icon } from 'astro-icon';
+import Link from '../common/link.astro';
+import Button from '../common/button.astro';
+import LanguageSelect from './language-select.astro';
+
+const navItems: Array<NavItem> = [
+  { title: t('header:documentation'), url: 'docs' },
+  { title: t('header:encyclopedia'), url: 'encyclopedia' },
+];
+---
+
+<header
+  id="page-header"
+  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+>
+  <Link href="/">
+    <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
+  </Link>
+  <div>
+    <div class="flex items-center gap-6">
+      <nav class="hidden sm:block">
+        <ul class="flex items-center gap-6">
+          {
+            navItems.map(({ title, url }) => (
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+              <li>
+                <Link class="text-md" href={url}>
+                  {title}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <LanguageSelect />
+      <Link class="bg-default border-2 px-4 py-2 border-current" href={INVITE_LINK}>
+        {t('header:addToServer')}
+      </Link>
+      <Button id="open-nav-button" class="sm:hidden">
+        <Icon pack="mdi" name="menu" class="h-8" />
+      </Button>
+    </div>
+    <div class="hidden">
+      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
+        <div class="space-y-4">
+          <header class="text-right">
+            <Button id="open-nav-button" class="sm:hidden">
+              <Icon pack="mdi" name="menu" class="h-8" />
+            </Button>
+          </header>
+          <div class="flex justify-center">
+            <!-- <Icon name="logomark" class="h-16" /> -->
+          </div>
+          <nav>
+            <ul class="flex flex-col">
+              {
+                navItems.map(({ title, url }) => (
+                  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+                  <li>
+                    <Link class="text-md" href={url}>
+                      {title}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
