@@ -5,6 +5,7 @@ import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../const';
 import Link from '../common/link.astro';
 import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
+import './header.css';
 
 const navItems: Array<NavItem> = [
   { title: t('header:documentation'), url: 'docs' },
@@ -41,14 +42,14 @@ const navItems: Array<NavItem> = [
         {t('header:addToServer')}
       </Link>
       <button type="button" class="link sm:hidden" onclick="toggleMobileMenu()">
-        <Icon pack="mdi" name="menu" class="h-10" />
+        <Icon pack="mdi" name="menu" class="h-8" />
       </button>
     </div>
     <div class="hidden" id="mobile-menu">
       <div class="fixed inset-0 bg-default p-4 text-default">
         <header class="text-right">
           <button type="button" class="link" onclick="toggleMobileMenu()">
-            <Icon pack="mdi" name="close" class="h-10" />
+            <Icon pack="mdi" name="close" class="h-8" />
           </button>
         </header>
         <div class="flex justify-center pb-4">
@@ -80,6 +81,16 @@ const navItems: Array<NavItem> = [
 <script is:inline>
   function toggleMobileMenu() {
     const menu = document.getElementById('mobile-menu');
-    menu?.classList.toggle('hidden');
+    menu.classList.toggle('hidden');
   }
+</script>
+
+<script>
+  const header = document.getElementById('page-header') as HTMLElement;
+  const page = document.documentElement;
+
+  document.addEventListener('scroll', () => {
+    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    header.classList.toggle('fixed-header', d < 0);
+  });
 </script>
