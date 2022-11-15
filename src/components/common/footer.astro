@@ -1,5 +1,5 @@
 ---
-import i18next from 'i18next';
+import i18next, { t } from 'i18next';
 import type { FooterLink } from '../../types';
 import { Icon } from 'astro-icon';
 import Link from './link.astro';
@@ -10,7 +10,6 @@ const currentLanguage = i18next.language;
 const links: Array<FooterLink> = [
   {
     url: INVITE_LINK,
-    description: 'Astro on Discord',
     icon: 'fa-brands:discord',
   },
 ];
@@ -27,7 +26,6 @@ const links: Array<FooterLink> = [
               href={link.url}
             >
               <Fragment>
-                <span class="sr-only">{link.description}</span>
                 <Icon class="h-full" name={link.icon} />
               </Fragment>
             </Link>
@@ -37,7 +35,7 @@ const links: Array<FooterLink> = [
     </ul>
   </div>
   <div class="flex items-center gap-4">
-    <Link href={`/${currentLanguage}/terms-of-service`}>Terms of Service</Link>
-    <Link href={`/${currentLanguage}/privacy-policy`}>Privacy Policy</Link>
+    <Link href={`/${currentLanguage}/terms-of-service`}>{t('footer:terms-of-service')}</Link>
+    <Link href={`/${currentLanguage}/privacy-policy`}>{t('footer:privacy-policy')}</Link>
   </div>
 </footer>

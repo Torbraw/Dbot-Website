@@ -11,6 +11,5 @@ export interface FeatureItem {
 
 export interface FooterLink {
   url: string;
-  description: string;
   icon: string;
 }
