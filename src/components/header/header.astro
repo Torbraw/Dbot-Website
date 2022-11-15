@@ -26,8 +26,6 @@ const navItems: Array<NavItem> = [
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
-              // TODO put this in a component
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-return
               <li>
                 <Link class="text-md" href={url}>
                   {title}
