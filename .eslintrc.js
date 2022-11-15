@@ -2,7 +2,7 @@ module.exports = {
   overrides: [
     {
       parser: '@typescript-eslint/parser',
-      files: ['*.ts', '*.astro'],
+      files: ['*.ts', '*.astro', '*.tsx'],
       parserOptions: {
         project: ['./tsconfig.json'],
       },
@@ -41,6 +41,13 @@ module.exports = {
       extends: ['plugin:astro/recommended'],
       rules: {
         'astro/no-unused-css-selector': 'error',
+      },
+    },
+    {
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        'prettier/prettier': 'off',
       },
     },
   ],

@@ -2,10 +2,9 @@
 import type { NavItem } from '../../types';
 import { t } from 'i18next';
 import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../const';
-import { Icon } from 'astro-icon';
 import Link from '../common/link.astro';
-import Button from '../common/button.astro';
 import LanguageSelect from './language-select.astro';
+import Icon from 'astro-icon';
 
 const navItems: Array<NavItem> = [
   { title: t('header:documentation'), url: 'docs' },
@@ -26,6 +25,7 @@ const navItems: Array<NavItem> = [
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
+              // TODO put this in a component
               // eslint-disable-next-line @typescript-eslint/no-unsafe-return
               <li>
                 <Link class="text-md" href={url}>
@@ -36,41 +36,50 @@ const navItems: Array<NavItem> = [
           }
         </ul>
       </nav>
-      <LanguageSelect />
+      <LanguageSelect class="hidden sm:block" />
       <Link class="bg-default border-2 px-4 py-2 border-current" href={INVITE_LINK}>
         {t('header:addToServer')}
       </Link>
-      <Button id="open-nav-button" class="sm:hidden">
+      <button type="button" class="link sm:hidden" onclick="toggleMobileMenu()">
         <Icon pack="mdi" name="menu" class="h-8" />
-      </Button>
+      </button>
     </div>
-    <div class="hidden">
-      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
-        <div class="space-y-4">
-          <header class="text-right">
-            <Button id="open-nav-button" class="sm:hidden">
-              <Icon pack="mdi" name="menu" class="h-8" />
-            </Button>
-          </header>
-          <div class="flex justify-center">
-            <!-- <Icon name="logomark" class="h-16" /> -->
-          </div>
-          <nav>
-            <ul class="flex flex-col">
-              {
-                navItems.map(({ title, url }) => (
-                  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-                  <li>
-                    <Link class="text-md" href={url}>
-                      {title}
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
+    <div class="hidden" id="mobile-menu">
+      <div class="fixed inset-0 bg-default p-4 text-default">
+        <header class="text-right">
+          <button type="button" class="link" onclick="toggleMobileMenu()">
+            <Icon pack="mdi" name="close" class="h-8" />
+          </button>
+        </header>
+        <div class="flex justify-center pb-4">
+          <Link href="/">
+            <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-20 w-20" />
+          </Link>
         </div>
+        <div class="flex justify-center py-4">
+          <LanguageSelect class="w-[200px]" />
+        </div>
+        <nav>
+          <ul class="flex flex-col">
+            {
+              navItems.map(({ title, url }) => (
+                <li>
+                  <Link class="block py-4 text-center text-2xl" href={url}>
+                    {title}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
 </header>
+
+<script is:inline>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  }
+</script>
