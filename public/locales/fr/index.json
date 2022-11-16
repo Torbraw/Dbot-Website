@@ -3,5 +3,14 @@
   "intro": {
     "title": "Amusant et simple",
     "desc": "Un simple jeu de style <0>RPG<0> sur discord qui <1>évolue constamment<1>. Toutes les <2>mécaniques de base<2> que vous attendez et plus encore."
+  },
+  "features": {
+    "title": "Fonctionnalités",
+    "desc": "Dbot regorge de <0>fonctionnalités</0>. Vous pouvez <0>chasser un monstre</0> pour avoir une chance d'obtenir son <0>butin</0> ou même combattre les plus fort dans une <0>bataille PVP</0>.",
+    "seeDocs": "Voir la documentation complète →",
+    "basic": {
+      "title": "",
+      "desc": ""
+    }
   }
 }

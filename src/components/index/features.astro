@@ -1,7 +1,12 @@
 ---
+import i18next, { t } from 'i18next';
+import { Trans } from 'astro-i18next/components';
 import { Icon } from 'astro-icon';
 import ContentSection from './content-section.astro';
 import type { FeatureItem } from '../../types';
+import Link from '../common/link.astro';
+
+const currentLanguage = i18next.language;
 
 const features: Array<FeatureItem> = [
   {
@@ -42,11 +47,9 @@ const features: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="Features">
+<ContentSection title={t('features.title')}>
   <Fragment slot="main">
-    Astro comes <span class="text-primary">batteries included</span>. It takes the best parts of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">innovations</span>.
+    <Trans i18nKey="features.desc"><span class="text-primary"></span></Trans>
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
@@ -61,4 +64,7 @@ const features: Array<FeatureItem> = [
       ))
     }
   </ul>
+  <span class="!mt-0 w-full text-right text-sm">
+    <Link class="text-primary" href={`/${currentLanguage}/docs`}>{t('features.seeDocs')}</Link>
+  </span>
 </ContentSection>
