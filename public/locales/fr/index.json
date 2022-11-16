@@ -1,3 +1,7 @@
 {
-  "title": "Bot. <0> Discord. <1> RPG."
+  "title": "Bot. <0> Discord. <1> RPG.",
+  "intro": {
+    "title": "Amusant et simple",
+    "desc": "Un simple jeu de style <0>RPG<0> sur discord qui <1>évolue constamment<1>. Toutes les <2>mécaniques de base<2> que vous attendez et plus encore."
+  }
 }

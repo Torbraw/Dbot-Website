@@ -1,12 +1,12 @@
 ---
+import { t } from 'i18next';
+import { Trans } from 'astro-i18next/components';
+
 import ContentSection from './content-section.astro';
 ---
 
-<ContentSection title="Just ship less">
+<ContentSection title={t('intro.title')}>
   <Fragment slot="main">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    <Trans i18nKey="intro.desc"><span class="text-primary"></span></Trans>
   </Fragment>
 </ContentSection>
