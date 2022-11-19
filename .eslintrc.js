@@ -41,6 +41,7 @@ module.exports = {
       extends: ['plugin:astro/recommended'],
       rules: {
         'astro/no-unused-css-selector': 'error',
+        '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
     {
