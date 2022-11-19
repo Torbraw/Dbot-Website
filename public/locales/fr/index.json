@@ -8,9 +8,29 @@
     "title": "Fonctionnalités",
     "desc": "Dbot regorge de <0>fonctionnalités</0>. Vous pouvez <0>chasser un monstre</0> pour avoir une chance d'obtenir son <0>butin</0> ou même combattre les plus fort dans une <0>bataille PVP</0>.",
     "seeDocs": "Voir la documentation complète →",
-    "basic": {
-      "title": "",
-      "desc": ""
+    "equipments": {
+      "title": "Équipements",
+      "desc": "Les équipements peuvent être obtenus dans la machine à sous, obtenu sur des monstres, achetés sur le marché ou même fabriqués."
+    },
+    "pve": {
+      "title": "PVE",
+      "desc": "Chassez des monstres avec d'autres joueurs pour avoir une chance de gagner leur butin et plus encore."
+    },
+    "pvp": {
+      "title": "PVP",
+      "desc": "Combattez à mort avec votre arme et vos sorts contre un autre joueur pour gagner des devises et de la renommée."
+    },
+    "quests": {
+      "title": "Quêtes",
+        "desc": "Lancez-vous dans différentes quêtes lorsque vous avez du temps libre pour acquérir des ressources utiles pour fabriquer des items."
+      },
+    "enchantments": {
+      "title": "Enchantements",
+      "desc": "Échangez des gemmes d'enchantement pour avoir la possibilité d'enchanter vos objets pour augmenter leurs statistiques."
+    },
+    "achievements": {
+      "title": "Succès",
+      "desc": "Chaque action de votre aventure peut vous procurer des succès et parfois des titres."
     }
   }
 }
