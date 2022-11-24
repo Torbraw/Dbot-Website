@@ -4,7 +4,7 @@ const config: AstroI18nextConfig = {
   defaultLocale: "en",
   showDefaultLocale: true,
   locales: ["en", "fr"],
-  namespaces: ["index", "header", "footer"],
+  namespaces: ["index", "header", "footer", "docs"],
   defaultNamespace: "index",
 };
 
