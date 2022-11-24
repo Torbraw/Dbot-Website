@@ -1,5 +1,4 @@
 ---
-import { t } from 'i18next';
 import type { MarkdownHeading } from 'astro';
 import RightSidebar from '../components/right-sidebar/right-sidebar.astro';
 import type { Frontmatter } from '../types';
@@ -7,13 +6,15 @@ import BaseLayout from './base-layout.astro';
 
 export interface Props {
   frontmatter: Frontmatter;
+  title: string;
   headings: MarkdownHeading[];
 }
 
 const { frontmatter, headings } = Astro.props;
+const { title } = Astro.props.frontmatter;
 ---
 
-<BaseLayout title={t('docs:pageTitle')}>
+<BaseLayout title={title}>
   <aside>
     <RightSidebar headings={headings} />
   </aside>
