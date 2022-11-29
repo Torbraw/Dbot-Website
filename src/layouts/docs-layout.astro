@@ -1,5 +1,6 @@
 ---
 import type { MarkdownHeading } from 'astro';
+import LeftSidebar from '../components/docs/left-sidebar/left-sidebar.astro';
 import PageContent from '../components/docs/page-content.astro';
 import RightSidebar from '../components/docs/right-sidebar/right-sidebar.astro';
 import type { Frontmatter } from '../types';
@@ -12,15 +13,21 @@ export interface Props {
 
 const { frontmatter, headings } = Astro.props;
 const { title } = Astro.props.frontmatter;
+const currentPage = Astro.url.pathname;
 ---
 
 <BaseLayout title={title}>
-  <div>
-    <PageContent frontmatter={frontmatter}>
-      <slot />
-    </PageContent>
-  </div>
-  <aside>
-    <RightSidebar headings={headings} />
-  </aside>
+  <main>
+    <aside>
+      <LeftSidebar currentPage={currentPage} />
+    </aside>
+    <div>
+      <PageContent frontmatter={frontmatter} currentPage={currentPage}>
+        <slot />
+      </PageContent>
+    </div>
+    <aside>
+      <RightSidebar headings={headings} title={frontmatter.title} />
+    </aside>
+  </main>
 </BaseLayout>

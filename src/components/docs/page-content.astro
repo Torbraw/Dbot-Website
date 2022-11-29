@@ -1,17 +1,22 @@
 ---
 import type { Frontmatter } from '../../types';
+import Pagination from './pagination.astro';
 
 export interface Props {
   frontmatter: Frontmatter;
+  currentPage: string;
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, currentPage } = Astro.props;
 const title = frontmatter.title;
 ---
 
-<article id="article" class="content">
-  <section class="main-section">
-    <h1 class="content-title" id="overview">{title}</h1>
-    <slot />
+<article id="article">
+  <section>
+    <h1 id="overview">{title}</h1>
+    <article>
+      <slot />
+    </article>
   </section>
 </article>
+<Pagination currentPage={currentPage} />

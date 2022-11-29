@@ -1,0 +1,40 @@
+---
+import i18next from 'i18next';
+import { SIDEBAR } from '../../../config';
+
+export interface Props {
+  currentPage: string;
+}
+
+const { currentPage } = Astro.props;
+const hasTrailing = currentPage.endsWith('/');
+const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
+const currentLanguage = i18next.language;
+const sidebar = SIDEBAR[currentLanguage];
+---
+
+<nav>
+  <ul>
+    {
+      Object.entries(sidebar).map(([header, children]) => (
+        <li>
+          <div>
+            <h2>{header}</h2>
+            <ul>
+              {children.map((child) => {
+                const url = (Astro.site?.pathname || '') + child.link;
+                return (
+                  <li>
+                    <a href={url} aria-current={currentPageMatch === child.link ? 'page' : false}>
+                      {child.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
