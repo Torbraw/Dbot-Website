@@ -16,7 +16,7 @@ const { title } = Astro.props.frontmatter;
 const currentPage = Astro.url.pathname;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} headerFixed={true}>
   <main>
     <aside>
       <LeftSidebar currentPage={currentPage} />

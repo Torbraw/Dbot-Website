@@ -7,6 +7,12 @@ import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
 import './header.css';
 
+export interface Props {
+  headerFixed?: boolean;
+}
+
+const { headerFixed } = Astro.props;
+
 const currentLanguage = i18next.language;
 
 const navItems: Array<NavItem> = [
@@ -17,7 +23,10 @@ const navItems: Array<NavItem> = [
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4"
+  class:list={[
+    'z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4',
+    { 'absolute bottom-0': !headerFixed },
+  ]}
 >
   <Link href={`/${currentLanguage}`}>
     <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
