@@ -45,11 +45,11 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
             );
             if (currentActiveParentElements.length) {
               for (const parentEl of currentActiveParentElements) {
-                parentEl.classList.remove('border-primary', 'text-primary');
+                parentEl.classList.remove('border-primary', 'text-primary', 'bg-offset');
                 parentEl.removeAttribute('data-current-active-parent-tab-content-item');
               }
             }
-            tocItem.parentElement.classList.add('border-primary', 'text-primary');
+            tocItem.parentElement.classList.add('border-primary', 'text-primary', 'bg-offset');
             tocItem.parentElement.setAttribute('data-current-active-parent-tab-content-item', true);
           }
         });
