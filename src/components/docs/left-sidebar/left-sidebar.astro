@@ -17,13 +17,13 @@ const currentLanguage = i18next.language;
 const sidebar = SIDEBAR[currentLanguage];
 ---
 
-<nav class="lg:mb-12">
+<nav>
   <ul class="px-4 pb-28 md:pb-0">
     {
       Object.entries(sidebar).map(([header, children]) => (
         <li>
           <div>
-            <h2 class="text-md pb-2 font-semibold sm:text-lg">
+            <h2 class="py-2 text-lg font-semibold sm:text-lg">
               <GradientText>{header}</GradientText>
             </h2>
             <ul class="mb-2">
@@ -33,7 +33,7 @@ const sidebar = SIDEBAR[currentLanguage];
                   <li>
                     <a
                       class:list={[
-                        'link text-sm block py-2 hover:border-secondary hover:bg-offset border-l-2 p-2',
+                        'link text-md block hover:border-secondary hover:bg-offset border-l-2 p-2',
                         { 'border-primary text-primary': isActive },
                       ]}
                       href={child.link}

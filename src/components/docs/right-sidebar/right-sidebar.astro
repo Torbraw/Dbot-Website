@@ -1,5 +1,6 @@
 ---
 import type { MarkdownHeading } from 'astro';
+import GradientText from '../../common/gradient-text.astro';
 
 export interface Props {
   headings: MarkdownHeading[];
@@ -12,14 +13,16 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
 
 <nav>
   <div>
-    <h2>On this page</h2>
-    <ul>
+    <h2 class="text-md py-2 font-semibold" id="toc-heading"><GradientText>On this page</GradientText></h2>
+    <ul class="mb-2 list-none">
       {
         headings.map((heading) => {
           const { depth, slug, text } = heading;
           return (
-            <li class={`pl-${depth * 2 - 2} `}>
-              <a href={`#${slug}`}>{text}</a>
+            <li class={`pl-${depth * 2 - 2} border-l-2 p-1 hover:border-secondary hover:bg-offset`}>
+              <a class="link block text-sm" href={`#${slug}`}>
+                {text}
+              </a>
             </li>
           );
         })
@@ -27,3 +30,34 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
     </ul>
   </div>
 </nav>
+
+<script is:inline>
+  // Toggle classes when items are in view
+  document.querySelectorAll('article :is(h1,h2,h3)').forEach((h) => {
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          const tocItem = document.querySelector(`a[href="#${id}"]`);
+          if (entry.isIntersecting) {
+            const currentActiveParentElements = Array.from(
+              document.querySelectorAll(`[data-current-active-parent-tab-content-item="true"]`),
+            );
+            if (currentActiveParentElements.length) {
+              for (const parentEl of currentActiveParentElements) {
+                parentEl.classList.remove('border-primary', 'text-primary');
+                parentEl.removeAttribute('data-current-active-parent-tab-content-item');
+              }
+            }
+            tocItem.parentElement.classList.add('border-primary', 'text-primary');
+            tocItem.parentElement.setAttribute('data-current-active-parent-tab-content-item', true);
+          }
+        });
+      },
+      {
+        rootMargin: '-100px 0% -66%',
+        threshold: 1,
+      },
+    ).observe(h);
+  });
+</script>
