@@ -1,6 +1,7 @@
 ---
 import i18next from 'i18next';
 import { SIDEBAR } from '../../../config';
+import GradientText from '../../common/gradient-text.astro';
 
 export interface Props {
   currentPage: string;
@@ -8,24 +9,35 @@ export interface Props {
 
 const { currentPage } = Astro.props;
 const hasTrailing = currentPage.endsWith('/');
-const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
+const currentPageMatch = currentPage
+  .slice(1, hasTrailing ? -1 : currentPage.length)
+  .split('/')
+  .pop();
 const currentLanguage = i18next.language;
 const sidebar = SIDEBAR[currentLanguage];
 ---
 
-<nav>
-  <ul>
+<nav class="lg:mb-12">
+  <ul class="px-4 pb-28 md:pb-0">
     {
       Object.entries(sidebar).map(([header, children]) => (
         <li>
           <div>
-            <h2>{header}</h2>
-            <ul>
+            <h2 class="text-md pb-2 font-semibold sm:text-lg">
+              <GradientText>{header}</GradientText>
+            </h2>
+            <ul class="mb-2">
               {children.map((child) => {
-                const url = (Astro.site?.pathname || '') + child.link;
+                const isActive = currentPageMatch === child.link;
                 return (
                   <li>
-                    <a href={url} aria-current={currentPageMatch === child.link ? 'page' : false}>
+                    <a
+                      class:list={[
+                        'link text-sm block py-2 hover:border-secondary hover:bg-offset border-l-2 p-2',
+                        { 'border-primary text-primary': isActive },
+                      ]}
+                      href={child.link}
+                    >
                       {child.text}
                     </a>
                   </li>

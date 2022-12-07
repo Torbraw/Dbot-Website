@@ -6,6 +6,9 @@ export type SidebarContent = { text: string; link: string };
 export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
-    Dbot: [{ text: 'Introduction', link: 'intro' }],
+    Dbot: [
+      { text: 'Introduction', link: 'intro' },
+      { text: 'Introduction2', link: 'intro2' },
+    ],
   },
 };
