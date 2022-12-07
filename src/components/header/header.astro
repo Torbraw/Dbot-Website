@@ -33,7 +33,7 @@ const navItems: Array<NavItem> = [
   </Link>
   <div>
     <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
+      <nav class="hidden md:block">
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
@@ -46,11 +46,11 @@ const navItems: Array<NavItem> = [
           }
         </ul>
       </nav>
-      <LanguageSelect class="hidden sm:block" />
+      <LanguageSelect class="hidden md:block" />
       <Link class="bg-default border-2 px-4 py-2 border-current" href={INVITE_LINK}>
         {t('header:addToServer')}
       </Link>
-      <button type="button" class="link sm:hidden" onclick="toggleMobileMenu()">
+      <button type="button" class="link md:hidden" onclick="toggleMobileMenu()">
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
     </div>
