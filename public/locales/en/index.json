@@ -8,7 +8,7 @@
   "features": {
     "title": "Features",
     "desc": "Dbot is packed with <0>functionalities</0>. You can <0>hunt a monster</0> to have a chance to get his <0>loot</0> or even fight the strongests in a <0>PVP battle</0>.",
-    "seeDocs": "See full docs →",
+    "seeDocumentation": "See full documentation →",
     "equipments": {
       "title": "Equipments",
       "desc": "Equipments can be obtained in the slot machine, dropped from monster, bought in the marketplace or even crafted."

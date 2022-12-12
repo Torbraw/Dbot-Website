@@ -6,9 +6,20 @@ export type SidebarContent = { text: string; link: string };
 export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
-    Dbot: [
-      { text: 'Introduction', link: 'intro' },
-      { text: 'Introduction2', link: 'intro2' },
+    'Getting Started': [
+      { text: 'Introduction', link: 'introduction' },
+      { text: 'How to use', link: 'how-to-use' },
+    ],
+    Basics: [
+      { text: 'Players', link: 'basics/players' },
+      { text: 'Guilds', link: 'basics/guilds' },
+      { text: 'Currency', link: 'basics/currency' },
+      { text: 'Items', link: 'basics/items' },
+      { text: 'Enchanting', link: 'basics/enchenting' },
+      { text: 'Spells', link: 'basics/spells' },
+      { text: 'PVE', link: 'basics/pve' },
+      { text: 'PVP', link: 'basics/pvp' },
+      { text: 'Quests', link: 'basics/quests' },
     ],
   },
 };
