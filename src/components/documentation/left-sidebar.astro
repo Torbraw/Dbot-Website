@@ -9,10 +9,7 @@ export interface Props {
 
 const { currentPage } = Astro.props;
 const hasTrailing = currentPage.endsWith('/');
-const currentPageMatch = currentPage
-  .slice(1, hasTrailing ? -1 : currentPage.length)
-  .split('/')
-  .pop();
+const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
 const currentLanguage = i18next.language;
 const sidebar = SIDEBAR[currentLanguage];
 ---
@@ -28,6 +25,7 @@ const sidebar = SIDEBAR[currentLanguage];
             </h2>
             <ul class="mb-2">
               {children.map((child) => {
+                const url = (Astro.site?.pathname || '') + child.link;
                 const isActive = currentPageMatch === child.link;
                 return (
                   <li>
@@ -36,7 +34,7 @@ const sidebar = SIDEBAR[currentLanguage];
                         'link text-md block hover:border-secondary hover:bg-offset border-l-2 p-2',
                         { 'border-primary text-primary bg-offset': isActive },
                       ]}
-                      href={child.link}
+                      href={url}
                     >
                       {child.text}
                     </a>
