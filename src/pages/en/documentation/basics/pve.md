@@ -1,6 +1,6 @@
 ---
-title: Quests
+title: PVE
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Quests
+## PVE

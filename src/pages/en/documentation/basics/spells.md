@@ -1,6 +1,6 @@
 ---
-title: PVE
+title: Spells
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## PVE
+## Spells

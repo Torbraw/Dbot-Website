@@ -1,6 +1,6 @@
 ---
-title: Players
+title: Quests
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Players
+## Quests

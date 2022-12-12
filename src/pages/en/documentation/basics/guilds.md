@@ -1,6 +1,6 @@
 ---
-title: Spells
+title: Guilds
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Spells
+## Guilds

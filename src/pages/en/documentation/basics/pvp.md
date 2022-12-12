@@ -1,6 +1,6 @@
 ---
-title: Items
+title: PVP
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Items
+## PVP

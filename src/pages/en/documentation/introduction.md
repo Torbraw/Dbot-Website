@@ -1,6 +1,6 @@
 ---
-title: How to use
+title: Introduction
 layout: ../../../layouts/documentation-layout.astro
 ---
 
-## How to use
+## Documentation EN

@@ -1,6 +1,6 @@
 ---
-title: Guilds
+title: Currency
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Guilds
+## Currency

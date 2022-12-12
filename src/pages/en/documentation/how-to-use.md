@@ -1,6 +1,6 @@
 ---
-title: Introduction
+title: How to use
 layout: ../../../layouts/documentation-layout.astro
 ---
 
-## Documentation EN
+## How to use

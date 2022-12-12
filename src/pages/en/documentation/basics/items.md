@@ -1,6 +1,6 @@
 ---
-title: Enchanting
+title: Items
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Enchanting
+## Items

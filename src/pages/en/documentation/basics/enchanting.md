@@ -1,6 +1,6 @@
 ---
-title: Currency
+title: Enchanting
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## Currency
+## Enchanting
