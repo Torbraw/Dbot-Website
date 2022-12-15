@@ -101,6 +101,8 @@ const navItems: Array<NavItem> = [
 
   document.addEventListener('scroll', () => {
     const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-    header.classList.toggle('fixed-header', d < 0);
+    if (!header.classList.contains('sticky')) {
+      header.classList.toggle('fixed-header', d < 0);
+    }
   });
 </script>
