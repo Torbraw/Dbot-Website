@@ -6,16 +6,16 @@ import Footer from '../components/footer/footer.astro';
 
 export interface Props {
   title: string;
-  headerFixed?: boolean;
+  headerSticky?: boolean;
 }
 
-const { title, headerFixed } = Astro.props;
+const { title, headerSticky } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html
   lang="en"
-  class="h-full min-h-screen scrollbar scrollbar-track-transparent scrollbar-thumb-primary motion-safe:scroll-smooth"
+  class="h-full scrollbar scrollbar-track-transparent scrollbar-thumb-primary motion-safe:scroll-smooth"
   data-theme="dark"
   lang={i18next.language}
 >
@@ -38,8 +38,8 @@ const { title, headerFixed } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="h-full bg-default text-base text-default">
-    <Header headerFixed={headerFixed} />
+  <body class="h-full min-h-screen bg-default text-base text-default">
+    <Header headerSticky={headerSticky} />
     <slot />
     <Footer />
   </body>

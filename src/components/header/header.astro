@@ -8,10 +8,10 @@ import Icon from 'astro-icon';
 import './header.css';
 
 export interface Props {
-  headerFixed?: boolean;
+  headerSticky?: boolean;
 }
 
-const { headerFixed } = Astro.props;
+const { headerSticky } = Astro.props;
 
 const currentLanguage = i18next.language;
 
@@ -25,7 +25,8 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class:list={[
     'z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4',
-    { 'absolute bottom-0': !headerFixed },
+    { 'absolute bottom-0': !headerSticky },
+    { 'sticky top-0 bg-default': headerSticky },
   ]}
 >
   <Link href={`/${currentLanguage}`}>
