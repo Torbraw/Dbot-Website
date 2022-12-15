@@ -33,6 +33,7 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
 
 <script is:inline>
   // Toggle classes when items are in view
+  //TODO Fix
   document.querySelectorAll('article :is(h1,h2,h3)').forEach((h) => {
     new IntersectionObserver(
       (entries) => {
