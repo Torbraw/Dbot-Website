@@ -1,0 +1,41 @@
+.link {
+  @apply transition-colors duration-200;
+  @apply hover:text-secondary;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border: 4px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
+}
+
+/* Putting markdown styles here since the .md is a <slot /> and can't be styled from the parent */
+.markdown {
+  @apply flex w-full flex-col items-start justify-start px-4 leading-relaxed;
+}
+.markdown h1 {
+  @apply mt-8 mb-4 text-3xl font-extrabold;
+}
+.markdown h2 {
+  @apply mt-8 mb-4 text-2xl font-semibold;
+}
+.markdown h3 {
+  @apply mt-4 mb-2 text-xl font-semibold;
+}
+.markdown h4 {
+  @apply mt-2 mb-1 text-base font-medium;
+}
+.markdown li {
+  @apply list-disc;
+}
+.markdown ol > li {
+  @apply mb-2 list-decimal;
+}
+.markdown p {
+  @apply mb-4;
+}
