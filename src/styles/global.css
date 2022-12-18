@@ -1,4 +1,0 @@
-.link {
-  @apply transition-colors duration-200;
-  @apply hover:text-secondary;
-}

@@ -12,7 +12,7 @@ const { frontmatter, currentPage } = Astro.props;
 const title = frontmatter.title;
 ---
 
-<article id="article" class="flex w-full max-w-screen-lg flex-col">
+<article id="article" class="mb-8 flex w-full max-w-screen-md flex-col">
   <section class="w-full">
     <h1 id="overview" class="mb-4 px-4 text-3xl font-extrabold">
       <GradientText>{title}</GradientText>
