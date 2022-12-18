@@ -3,6 +3,7 @@ import type { MarkdownHeading } from 'astro';
 import LeftSidebar from '../components/documentation/left-sidebar.astro';
 import PageContent from '../components/documentation/page-content.astro';
 import RightSidebar from '../components/documentation/right-sidebar.astro';
+import Footer from '../components/footer/footer.astro';
 import type { Frontmatter } from '../types';
 import BaseLayout from './base-layout.astro';
 
@@ -17,9 +18,9 @@ const currentPage = Astro.url.pathname;
 ---
 
 <BaseLayout title={title} headerSticky={true}>
-  <main class="grid w-full flex-1 grid-cols-1 gap-4 md:grid-cols-[250px_auto] lg:mb-12 lg:grid-cols-[250px_auto_250px]">
+  <main class="grid w-full flex-1 grid-cols-1 gap-4 md:grid-cols-[250px_auto] lg:grid-cols-[250px_auto_250px]">
     <aside
-      class="sticky top-20 col-span-1 hidden w-full flex-col justify-start overflow-y-auto md:flex md:max-h-[calc(100vh-230px)] md:[margin-inline-start:16px]"
+      class="sticky top-20 col-span-1 hidden w-full flex-col justify-start overflow-y-auto md:mb-12 md:flex md:max-h-[calc(100vh-130px)] md:[margin-inline-start:16px]"
     >
       <LeftSidebar currentPage={currentPage} />
     </aside>
@@ -27,9 +28,10 @@ const currentPage = Astro.url.pathname;
       <PageContent frontmatter={frontmatter} currentPage={currentPage}>
         <slot />
       </PageContent>
+      <Footer />
     </div>
     <aside
-      class="sticky top-20 col-span-1 hidden w-full md:max-h-[calc(100vh-230px)] lg:flex lg:flex-col lg:justify-start"
+      class="sticky top-20 col-span-1 hidden w-full md:mb-12 md:max-h-[calc(100vh-130px)] lg:flex lg:flex-col lg:justify-start"
     >
       <RightSidebar headings={headings} title={frontmatter.title} />
     </aside>

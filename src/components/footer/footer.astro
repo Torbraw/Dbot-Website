@@ -15,27 +15,24 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<footer class="relative flex justify-between border-t border-default px-8 py-4">
-  <div class="flex items-center gap-4">
-    <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+<footer class="flex flex-col border-t border-default py-4">
+  <div class="mb-4 flex justify-center gap-4">
+    <Link href={`/${currentLanguage}/terms-of-service`}>{t('footer:termsOfService')}</Link>
+    <Link href={`/${currentLanguage}/privacy-policy`}>{t('footer:privacyPolicy')}</Link>
+  </div>
+  <div class="flex justify-center gap-4">
+    <ul>
       {
         links.map((link) => (
           <li>
-            <Link
-              class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
-              href={link.url}
-            >
+            <Link class="flex rounded-full border-2 border-current p-2" href={link.url}>
               <Fragment>
-                <Icon class="h-full" name={link.icon} />
+                <Icon class="h-[24px] w-[24px]" name={link.icon} />
               </Fragment>
             </Link>
           </li>
         ))
       }
     </ul>
-  </div>
-  <div class="flex items-center gap-4">
-    <Link href={`/${currentLanguage}/terms-of-service`}>{t('footer:termsOfService')}</Link>
-    <Link href={`/${currentLanguage}/privacy-policy`}>{t('footer:privacyPolicy')}</Link>
   </div>
 </footer>
