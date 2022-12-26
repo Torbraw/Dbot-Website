@@ -4,6 +4,7 @@ import { CLOUDFRONT_BASE_URL } from '../config';
 import BaseLayout from '../layouts/base-layout.astro';
 import GradientText from '../components/common/gradient-text.astro';
 import Link from '../components/common/link.astro';
+import ButtonLink from '../components/common/button-link.astro';
 ---
 
 <BaseLayout title={t('404:title')} showHeader={false}>
@@ -16,10 +17,10 @@ import Link from '../components/common/link.astro';
         <div class="text-center text-7xl font-extrabold tracking-tighter text-primary sm:text-8xl">
           <GradientText>{t('404:notFound')}</GradientText>
         </div>
-        <div class="mt-8 text-center text-2xl font-bold text-primary">
-          <Link href="/" class="bg-default border-2 px-4 py-2 border-current rounded-lg">
+        <div class="mt-8 text-center text-2xl font-bold">
+          <ButtonLink href="/">
             {t('404:returnHome')}
-          </Link>
+          </ButtonLink>
         </div>
       </h2>
     </div>

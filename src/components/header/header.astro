@@ -5,6 +5,7 @@ import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
 import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
+import ButtonLink from '../common/button-link.astro';
 
 export interface Props {
   headerSticky?: boolean;
@@ -47,9 +48,11 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav>
       <LanguageSelect class="hidden md:block" />
-      <Link class="bg-default border-2 px-4 py-2 border-current" href={INVITE_LINK}>
-        {t('header:addToServer')}
-      </Link>
+      <div class="font-bold">
+        <ButtonLink href={INVITE_LINK}>
+          {t('header:addToServer')}
+        </ButtonLink>
+      </div>
       <button type="button" class="link md:hidden" onclick="toggleMobileMenu()">
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
