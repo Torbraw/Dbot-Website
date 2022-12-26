@@ -10,7 +10,9 @@ module.exports = {
       },
       colors: {
         primary: "var(--color-primary)",
+        "primary-offset": "var(--color-primary-offset)",
         secondary: "var(--color-secondary)",
+        "secondary-offset": "var(--color-secondary-offset)",
       },
       textColor: {
         default: "var(--color-text)",

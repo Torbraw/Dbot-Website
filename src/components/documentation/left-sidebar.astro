@@ -31,8 +31,12 @@ const sidebar = SIDEBAR[currentLanguage];
                   <li>
                     <a
                       class:list={[
-                        'link text-md block hover:border-secondary hover:bg-offset border-l-2 p-2',
-                        { 'border-primary text-primary bg-offset': isActive },
+                        'link text-md block hover:bg-offset border-l-2 p-2 transition-colors duration-200',
+                        {
+                          'border-primary text-primary bg-offset hover:text-primary-offset hover:border-primary-offset':
+                            isActive,
+                        },
+                        { 'hover:text-secondary-offset hover:border-secondary-offset': !isActive },
                       ]}
                       href={url}
                     >

@@ -19,8 +19,12 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
         headings.map((heading) => {
           const { depth, slug, text } = heading;
           return (
-            <li class={`pl-${depth * 2 - 2} border-l-2 p-1 hover:border-secondary hover:bg-offset`}>
-              <a class="link block text-sm" href={`#${slug}`}>
+            <li
+              class={`pl-${
+                depth * 2 - 2
+              } border-l-2 p-1 hover:border-secondary-offset hover:bg-offset hover:text-secondary-offset`}
+            >
+              <a class="block text-sm" href={`#${slug}`}>
                 {text}
               </a>
             </li>
@@ -46,11 +50,25 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
             );
             if (currentActiveParentElements.length) {
               for (const parentEl of currentActiveParentElements) {
-                parentEl.classList.remove('border-primary', 'text-primary', 'bg-offset');
+                parentEl.classList.remove(
+                  'border-primary',
+                  'text-primary',
+                  'bg-offset',
+                  'hover:border-primary-offset',
+                  'hover:text-primary-offset',
+                );
+                parentEl.classList.add('hover:border-secondary-offset', 'hover:text-secondary-offset');
                 parentEl.removeAttribute('data-current-active-parent-tab-content-item');
               }
             }
-            tocItem.parentElement.classList.add('border-primary', 'text-primary', 'bg-offset');
+            tocItem.parentElement.classList.add(
+              'border-primary',
+              'text-primary',
+              'bg-offset',
+              'hover:border-primary-offset',
+              'hover:text-primary-offset',
+            );
+            tocItem.parentElement.classList.remove('hover:border-secondary-offset', 'hover:text-secondary-offset');
             tocItem.parentElement.setAttribute('data-current-active-parent-tab-content-item', true);
           }
         });

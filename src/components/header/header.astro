@@ -5,7 +5,6 @@ import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
 import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
-import ButtonLink from '../common/button-link.astro';
 
 export interface Props {
   headerSticky?: boolean;
@@ -48,19 +47,25 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav>
       <LanguageSelect class="hidden md:block" />
-      <div class="font-bold">
-        <ButtonLink href={INVITE_LINK}>
-          {t('header:addToServer')}
-        </ButtonLink>
-      </div>
-      <button type="button" class="link md:hidden" onclick="toggleMobileMenu()">
+      <Link href={INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
+        {t('header:addToServer')}
+      </Link>
+      <button
+        type="button"
+        class="transition-colors duration-200 hover:text-secondary-offset md:hidden"
+        onclick="toggleMobileMenu()"
+      >
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
     </div>
     <div class="hidden" id="mobile-menu">
       <div class="fixed inset-0 bg-default p-4 text-default">
         <header class="px-4 py-2 text-right">
-          <button type="button" class="link" onclick="toggleMobileMenu()">
+          <button
+            type="button"
+            class="transition-colors duration-200 hover:text-secondary-offset"
+            onclick="toggleMobileMenu()"
+          >
             <Icon pack="mdi" name="close" class="h-8" />
           </button>
         </header>

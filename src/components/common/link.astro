@@ -2,11 +2,22 @@
 export interface Props {
   href: string;
   class?: string;
+  isPrimary?: boolean;
+  isButton?: boolean;
 }
 
-const { href, class: className = '' } = Astro.props;
+const { href, class: className = '', isPrimary = false, isButton = false } = Astro.props;
 ---
 
-<a class={className + ' link'} href={href}>
+<a
+  class:list={[
+    className,
+    'transition-colors duration-200',
+    { 'text-primary hover:text-primary-offset': isPrimary },
+    { 'hover:text-secondary-offset': !isPrimary },
+    { 'border-2 px-4 py-2 border-current rounded-lg': isButton },
+  ]}
+  href={href}
+>
   <slot />
 </a>
