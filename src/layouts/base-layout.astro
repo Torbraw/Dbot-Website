@@ -6,9 +6,10 @@ import Header from '../components/header/header.astro';
 export interface Props {
   title: string;
   headerSticky?: boolean;
+  showHeader?: boolean;
 }
 
-const { title, headerSticky } = Astro.props;
+const { title, headerSticky, showHeader = true } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ const { title, headerSticky } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-default text-base text-default">
-    <Header headerSticky={headerSticky} />
+    {showHeader && <Header headerSticky={headerSticky} />}
     <slot />
   </body>
 </html>
