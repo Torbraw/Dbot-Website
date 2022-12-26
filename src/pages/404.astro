@@ -1,0 +1,27 @@
+---
+import { t } from 'i18next';
+import { CLOUDFRONT_BASE_URL } from '../config';
+import BaseLayout from '../layouts/base-layout.astro';
+import GradientText from '../components/common/gradient-text.astro';
+import Link from '../components/common/link.astro';
+---
+
+<BaseLayout title={t('404:title')}>
+  <section class="relative h-screen bg-offset">
+    <div class="grid h-full place-items-center">
+      <h2 class="flex flex-col gap-2 sm:gap-4">
+        <div class="grid place-items-center">
+          <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-24 w-24 sm:h-32 sm:w-32" />
+        </div>
+        <div class="text-center text-7xl font-extrabold tracking-tighter text-primary sm:text-8xl">
+          <GradientText>{t('404:notFound')}</GradientText>
+        </div>
+        <div class="mt-8 text-center text-2xl font-bold text-primary">
+          <Link href="/" class="bg-default border-2 px-4 py-2 border-current rounded-lg">
+            {t('404:returnHome')}
+          </Link>
+        </div>
+      </h2>
+    </div>
+  </section>
+</BaseLayout>
