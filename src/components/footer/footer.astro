@@ -3,13 +3,13 @@ import i18next, { t } from 'i18next';
 import type { FooterLink } from '../../types';
 import { Icon } from 'astro-icon';
 import Link from '../common/link.astro';
-import { INVITE_LINK } from '../../config';
+import { DBOT_DISCORD_LINK } from '../../config';
 
 const currentLanguage = i18next.language;
 
 const links: Array<FooterLink> = [
   {
-    url: INVITE_LINK,
+    url: DBOT_DISCORD_LINK,
     icon: 'fa-brands:discord',
   },
 ];
