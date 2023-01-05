@@ -1,9 +1,11 @@
 ---
-import { t } from 'i18next';
+import i18next, { t } from 'i18next';
 import { CLOUDFRONT_BASE_URL } from '../config';
 import BaseLayout from '../layouts/base-layout.astro';
 import GradientText from '../components/common/gradient-text.astro';
 import Link from '../components/common/link.astro';
+
+const currentLanguage = i18next.language;
 ---
 
 <BaseLayout title={t('404:title')} showHeader={false}>
@@ -17,7 +19,7 @@ import Link from '../components/common/link.astro';
           <GradientText>{t('404:notFound')}</GradientText>
         </div>
         <div class="mt-8 text-center">
-          <Link isPrimary={true} isButton={true} href="/" class="text-2xl font-bold">
+          <Link isPrimary={true} isButton={true} href={`/${currentLanguage}`} class="text-2xl font-bold">
             {t('404:returnHome')}
           </Link>
         </div>
