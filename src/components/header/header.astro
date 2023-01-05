@@ -3,11 +3,11 @@ import type { NavItem } from '../../types';
 import i18next, { t } from 'i18next';
 import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
-import LanguageSelect from './language-select.astro';
 import Icon from 'astro-icon';
+import { LanguageSelect } from './language-select';
 
 export interface Props {
-  headerSticky?: boolean;
+  headerSticky: boolean;
 }
 
 const { headerSticky } = Astro.props;
@@ -46,7 +46,7 @@ const navItems: Array<NavItem> = [
           }
         </ul>
       </nav>
-      <LanguageSelect />
+      <LanguageSelect client:load />
       <Link href={INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
         {t('header:addToServer')}
       </Link>
@@ -74,9 +74,6 @@ const navItems: Array<NavItem> = [
             <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-20 w-20" />
           </Link>
         </div>
-        <div class="flex justify-center py-4">
-          <LanguageSelect class="w-[200px]" />
-        </div>
         <nav>
           <ul class="flex flex-col">
             {
@@ -100,22 +97,20 @@ const navItems: Array<NavItem> = [
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
   }
-</script>
 
-<script>
-  const header = document.getElementById('page-header') as HTMLElement;
+  const header = document.getElementById('page-header');
   const page = document.documentElement;
 
   document.addEventListener('scroll', () => {
     const d = page.clientHeight - page.scrollTop - header.offsetHeight;
     if (!header.classList.contains('sticky')) {
-      header.classList.toggle('fixed-header', d < 0);
+      if (d < 0) {
+        header.classList.add('!fixed', 'top-0', 'bottom-auto', '!border-default', 'bg-default');
+      } else {
+        header.classList.remove('!fixed', 'top-0', 'bottom-auto', '!border-default', 'bg-default');
+      }
     }
   });
 </script>
 
-<style>
-  .fixed-header {
-    @apply fixed top-0 bottom-auto border-default bg-default;
-  }
-</style>
+<style></style>

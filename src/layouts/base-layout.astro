@@ -9,7 +9,7 @@ export interface Props {
   showHeader?: boolean;
 }
 
-const { title, headerSticky, showHeader = true } = Astro.props;
+const { title, headerSticky = false, showHeader = true } = Astro.props;
 ---
 
 <!DOCTYPE html>
