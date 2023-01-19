@@ -33,7 +33,7 @@ const navItems: Array<NavItem> = [
   </Link>
   <div>
     <div class="flex items-center gap-6">
-      <nav class="hidden md:block">
+      <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
@@ -52,7 +52,7 @@ const navItems: Array<NavItem> = [
       </Link>
       <button
         type="button"
-        class="transition-colors duration-200 hover:text-secondary-offset md:hidden"
+        class="transition-colors duration-200 hover:text-secondary-offset sm:hidden"
         onclick="toggleMobileMenu()"
       >
         <Icon pack="mdi" name="menu" class="h-8" />
@@ -112,5 +112,3 @@ const navItems: Array<NavItem> = [
     }
   });
 </script>
-
-<style></style>
