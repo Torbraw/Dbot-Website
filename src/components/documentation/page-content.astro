@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon';
 import type { Frontmatter } from '../../types';
 import GradientText from '../common/gradient-text.astro';
 import Pagination from './pagination.astro';
@@ -14,6 +15,13 @@ const title = frontmatter.title;
 
 <article id="article" class="mb-8 flex w-full max-w-screen-md flex-col">
   <section class="w-full">
+    <button
+      type="button"
+      class="px-4 transition-colors duration-200 hover:text-secondary-offset md:hidden"
+      onclick="toggleLeftSidebar()"
+    >
+      <Icon pack="ic" name="baseline-menu-book" class="h-8" />
+    </button>
     <h1 id="overview" class="mb-4 px-4 text-3xl font-extrabold">
       <GradientText>{title}</GradientText>
     </h1>
@@ -23,3 +31,10 @@ const title = frontmatter.title;
   </section>
 </article>
 <!-- <Pagination currentPage={currentPage} /> -->
+
+<script is:inline>
+  function toggleLeftSidebar() {
+    const menu = document.getElementById('main-content');
+    menu.classList.toggle('mobile-sidebar-toggle');
+  }
+</script>

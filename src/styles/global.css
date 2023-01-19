@@ -9,6 +9,16 @@
   border-radius: 10px;
 }
 
+@media (max-width: 767.5px) {
+  .mobile-sidebar-toggle {
+    @apply h-[calc(100vh-100px)] overflow-hidden
+  }
+
+  .mobile-sidebar-toggle #left-sidebar {
+    @apply flex h-[calc(100vh-100px)] w-[100vw] z-10 top-2
+  }
+}
+
 /* Putting markdown styles here since the .md is a <slot /> and can't be styled from the parent */
 .markdown {
   @apply flex w-full flex-col items-start justify-start px-4 leading-relaxed;
