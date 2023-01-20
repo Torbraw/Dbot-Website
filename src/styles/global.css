@@ -29,15 +29,23 @@
 }
 
 .markdown h2 {
-  @apply mt-8 mb-4 text-2xl font-semibold text-secondary;
+  @apply mt-8 mb-4 text-2xl font-semibold bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent;
 }
 
 .markdown h3 {
-  @apply mt-4 mb-2 text-xl font-semibold text-secondary;
+  @apply mt-4 mb-2 text-xl font-semibold bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent;
 }
 
 .markdown h4 {
-  @apply mt-2 mb-1 text-base font-medium text-secondary;
+  @apply mt-2 mb-1 text-base font-medium bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent;
+}
+
+.markdown a {
+  @apply transition-colors duration-200 text-secondary hover:text-secondary-offset underline decoration-dotted;
+}
+
+.markdown code {
+  @apply bg-offset border-2 border-default rounded-md p-1;
 }
 
 /* .markdown li {

@@ -7,20 +7,18 @@ export type SidebarContent = { text: string; link: string };
 export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
-    'Getting Started': [
-      { text: 'Introduction', link: 'en/documentation/introduction' },
-      { text: 'How to use', link: 'en/documentation/how-to-use' },
+    'Getting Started': [{ text: 'Introduction', link: 'en/documentation/introduction' }],
+    Features: [
+      { text: 'Players', link: 'en/documentation/features/players' },
+      { text: 'Guilds', link: 'en/documentation/features/guilds' },
+      { text: 'Currency', link: 'en/documentation/features/currency' },
+      { text: 'Items', link: 'en/documentation/features/items' },
+      { text: 'Enchanting', link: 'en/documentation/features/enchanting' },
+      { text: 'Spells', link: 'en/documentation/features/spells' },
+      { text: 'PVE', link: 'en/documentation/features/pve' },
+      { text: 'PVP', link: 'en/documentation/features/pvp' },
+      { text: 'Quests', link: 'en/documentation/features/quests' },
     ],
-    Basics: [
-      { text: 'Players', link: 'en/documentation/basics/players' },
-      { text: 'Guilds', link: 'en/documentation/basics/guilds' },
-      { text: 'Currency', link: 'en/documentation/basics/currency' },
-      { text: 'Items', link: 'en/documentation/basics/items' },
-      { text: 'Enchanting', link: 'en/documentation/basics/enchanting' },
-      { text: 'Spells', link: 'en/documentation/basics/spells' },
-      { text: 'PVE', link: 'en/documentation/basics/pve' },
-      { text: 'PVP', link: 'en/documentation/basics/pvp' },
-      { text: 'Quests', link: 'en/documentation/basics/quests' },
-    ],
+    Commands: [{ text: 'Slot', link: 'en/documentation/commands/slot' }],
   },
 };
