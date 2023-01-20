@@ -48,6 +48,14 @@
   @apply bg-offset border-2 border-default rounded-md p-1;
 }
 
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id] {
+  @apply scroll-mt-24;
+}
+
 /* .markdown li {
   @apply list-disc;
 }
