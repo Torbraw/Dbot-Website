@@ -17,7 +17,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'PVE', link: 'en/documentation/features/pve' },
       { text: 'PVP', link: 'en/documentation/features/pvp' },
       { text: 'Quests', link: 'en/documentation/features/quests' },
-      { text: 'Guilds', link: 'en/documentation/features/guilds' },
+      { text: 'Servers', link: 'en/documentation/features/servers' },
     ],
     Commands: [{ text: 'Slot', link: 'en/documentation/commands/slot' }],
   },
