@@ -1,9 +1,7 @@
 ---
-title: Slot
+title: Items
 layout: ../../../../layouts/documentation-layout.astro
 ---
-
-## Slot
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus tellus, faucibus at quam non, scelerisque blandit enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas blandit lacus at urna tincidunt, eu feugiat metus vehicula. Etiam sagittis augue enim, a mattis sapien convallis eu. Sed ac tellus a massa sodales tincidunt. Mauris sed maximus ex, a aliquet libero. Cras justo ex, volutpat vel molestie scelerisque, aliquet pellentesque lorem. Nam mollis justo a metus laoreet, vitae facilisis mauris fermentum. Vivamus hendrerit, tortor ut aliquam imperdiet, mi ipsum iaculis nisl, sed iaculis felis sem nec quam. Aliquam erat volutpat. Suspendisse mi velit, rutrum nec dui sed, finibus mattis lacus. Maecenas diam quam, pulvinar nec interdum eu, semper at sapien. Vivamus libero purus, vestibulum nec massa id, euismod facilisis purus. Proin a sodales tellus, ut consequat erat.
 
