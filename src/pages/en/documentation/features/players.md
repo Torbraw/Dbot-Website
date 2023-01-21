@@ -11,8 +11,8 @@ Attack and mana is used to attack monsters or other players and health is used t
 Players can also have [items](/en/documentation/features/items), that is used to increase their stats.
 
 In your journey, you will acquire achievements and sometimes titles linked to your achievements.
-You can equip a title to show it to other players with the [/set-title](/en/documentation/commands/set-title) command.
+You can equip a title to show it to other players with the [/set-title](/en/documentation/commands/users#set-title) command.
 
-To see your achievements, your stats and more, you can use the [/profile](/en/documentation/commands/profile) command.
+To see your achievements, your stats and more, you can use the [/profile](/en/documentation/commands/users#profile) command.
 Of course, you can also see other players profiles with the same command, to see who is better.
-If you think your are the best player their is, you can see the top players accross all server by using the [/rank](/en/documentation/commands/rank) command.
+If you think your are the best player their is, you can see the top players accross all server by using the [/rank](/en/documentation/commands/users#rank) command.
