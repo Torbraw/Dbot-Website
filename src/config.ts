@@ -10,6 +10,7 @@ export const SIDEBAR: Sidebar = {
     'Getting Started': [{ text: 'Introduction', link: 'en/documentation/introduction' }],
     Features: [
       { text: 'Players', link: 'en/documentation/features/players' },
+      { text: 'Servers', link: 'en/documentation/features/servers' },
       { text: 'Currency', link: 'en/documentation/features/currency' },
       { text: 'Items', link: 'en/documentation/features/items' },
       { text: 'Enchanting', link: 'en/documentation/features/enchanting' },
@@ -17,7 +18,7 @@ export const SIDEBAR: Sidebar = {
       { text: 'PVE', link: 'en/documentation/features/pve' },
       { text: 'PVP', link: 'en/documentation/features/pvp' },
       { text: 'Quests', link: 'en/documentation/features/quests' },
-      { text: 'Servers', link: 'en/documentation/features/servers' },
+      { text: 'Advancements', link: 'en/documentation/features/advancements' },
     ],
   },
 };
