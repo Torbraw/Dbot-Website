@@ -45,7 +45,7 @@
 }
 
 .markdown code {
-  @apply bg-offset border-2 border-default rounded-md p-1;
+  @apply bg-offset border-2 border-default rounded-md p-1 text-secondary;
 }
 
 h1[id],
