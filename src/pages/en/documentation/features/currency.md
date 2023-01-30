@@ -15,7 +15,7 @@ Coins is the main currency of the game. It is obtained by killing monsters, kill
 
 ## Blood Coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/BloodCoins.png'>
 
-Blood coins are obtained **only** by killing players. They can be used to buy **better** items at the Dbot marketplace or to buy a augmented drop percentage chance for the slot machine with `/buy-augmented-drop`.
+Blood coins are obtained only by killing players. They can be used to buy **better** items at the Dbot marketplace or to buy a augmented drop percentage chance for the slot machine with `/buy-augmented-drop`.
 
 ## Enchant gems <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'>
 
