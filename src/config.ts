@@ -13,10 +13,10 @@ export const SIDEBAR: Sidebar = {
       { text: 'Currency', link: 'en/documentation/features/currency' },
       { text: 'Items', link: 'en/documentation/features/items' },
       { text: 'Enchanting', link: 'en/documentation/features/enchanting' },
-      { text: 'Quests', link: 'en/documentation/features/quests' },
       { text: 'Spells', link: 'en/documentation/features/spells' },
       { text: 'PVE', link: 'en/documentation/features/pve' },
       { text: 'PVP', link: 'en/documentation/features/pvp' },
+      { text: 'Quests', link: 'en/documentation/features/quests' },
       { text: 'Servers', link: 'en/documentation/features/servers' },
     ],
     Commands: [
