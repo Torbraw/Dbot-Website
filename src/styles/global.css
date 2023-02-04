@@ -44,6 +44,10 @@
   @apply transition-colors duration-200 text-secondary hover:text-secondary-offset underline decoration-dotted;
 }
 
+.markdown img {
+  @apply w-[24px] h-[24px] inline-block;
+}
+
 .markdown code {
   @apply bg-offset border-2 border-default rounded-md p-1;
 }
