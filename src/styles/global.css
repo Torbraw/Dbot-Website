@@ -60,3 +60,14 @@ h5[id] {
   @apply scroll-mt-24;
 }
 
+.markdown li {
+  @apply list-disc;
+}
+
+.markdown ul {
+  padding-inline-start: 1em;
+}
+
+.markdown li:not(:first-child) {
+  margin-top: 1rem;
+}
