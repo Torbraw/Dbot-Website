@@ -3,6 +3,11 @@ title: PVP
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-## PVP
-Vous pouvez défier d'autres joueurs dans une bataille pvp au tour par tour. Chaque joueur peut choisir entre 4 actions et celui qui atteint 0 de santé perd. Le gagnant gagne des pièces, des gemmes d'enchantement et des pièces de sang.
-Les pièces de sang sont utilisées pour acheter des objets pvp exclusifs et augmenter les chances de drop pour la machie à sous.
+You can challenge other players in a pvp battle **only** in the pvp channel, read the [servers docs](/en/documentation/features/servers) to know how to set it up. The battle is a turn based system and the first to reach 0 health loses.
+
+Each turns you can do one of the following actions:
+
+**Attack**  
+You attack the other player and deal damage based on your attack stat. There is 3 type of attacks: light, normal and heavy. Each type of attack has a different percentage of hitting and a different damage multiplier.  
+**Cast a spell**  
+You use one of the [spells](/en/documentation/features/spells) you have equipped if you have enough mana to do so.
