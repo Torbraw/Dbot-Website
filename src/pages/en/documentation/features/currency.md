@@ -6,7 +6,8 @@ layout: ../../../../layouts/documentation-layout.astro
 They are three types of currency in the game: coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Coins.png'>,
 blood coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/BloodCoins.png'>
 and enchant gems <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'>.  
-Each of them can be obtained in different ways and are used for different purposes. If you have too much of one currency, you can exchange it for another one using the `/trade-currency` command. Since some currencies are more valuable than others, they are different rates for each exchange.  
+Each of them can be obtained in different ways and are used for different purposes. If you have too much of one currency, you can exchange it for another one using the `/trade-currency` command. Since some currencies are more valuable than others, they are different rates for each exchange.
+
 You can see your current amount of each currency in your profile using the `/profile` command.
 
 ## Coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Coins.png'>
