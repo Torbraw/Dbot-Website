@@ -9,4 +9,5 @@ When you see a monster, you can attack it with the `/attack` command. The damage
 
 ## Related commands
 
-If you are not sure if they're is a monster, you can use the `/current-monster` command to see if there is one. To have info about a certain monster, you can use the `/get-info` command or visit the [encyclopedia](/en/encyclopedia/monsters).
+- If you are not sure if they're is a monster, you can use the `/current-monster` command to see if there is one.
+- To have info about a certain monster, you can use the `/get-info` command or visit the [encyclopedia](/en/encyclopedia/monsters).
