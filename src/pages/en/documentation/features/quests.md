@@ -7,4 +7,4 @@ You can embark on quests to earn rewards with the `/quest`. They are multiple ty
 
 When you complete a quest, you earn **quest ressources** of the rarity of the quest. You can see which quest ressources you have with the `/inventory` command. You can use these ressources to craft items of the same rarity with the `/craft` command. You can also use the rare quest ressources to craft spells with the same command.
 
-// TODO: Add a link to the encyclopedia page
+To see the lists of quest ressources, you can visit the [encyclopedia](/en/encyclopedia/quest-ressources).
