@@ -8,4 +8,4 @@ You can have a maximum of 3 spells equipped at the same time. To use a spell, yo
 
 You can see all the spells available to buy with `/dbot-marketplace` and you can buy them with `/buy-dbot-marketplace`. You can equip or unequip spells with `/equip-unequip`. You can see the spells you have purchased in your inventory with `/inventory` and the spells you have equipped in your profile with `/profile`.
 
-// TODO: Add a link to the encyclopedia page
+To have info about a certain spell, you can use the `/get-info` command or visit the [encyclopedia](/en/encyclopedia/spells).
