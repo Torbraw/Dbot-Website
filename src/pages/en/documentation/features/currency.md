@@ -12,7 +12,7 @@ You can see your current amount of each currency in your profile using the `/pro
 
 ## Coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Coins.png'>
 
-Coins is the main currency of the game. It is obtained by killing monsters, killing players, winning at the slot machine and selling items at the marketplace. You can spend those coins by buying items or spells at the marketplace or extra slot spins with `/buy-slot-spins`.
+Coins is the main currency of the game. It is obtained by killing monsters, killing players, winning at the slot machine and selling items. You can spend those coins by buying items or spells at the marketplace or extra slot spins with `/buy-slot-spins`.
 
 ## Blood Coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/BloodCoins.png'>
 
