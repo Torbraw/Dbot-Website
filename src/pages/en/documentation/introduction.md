@@ -8,7 +8,8 @@ Like any other RPG, your goal is to level up and become the strongest player wit
   
 To be able to play with the bot, you need to [invite](https://discord.com/api/oauth2/authorize?client_id=804548465878237215&scope=applications.commands%20bot&permissions=1428345547856) the bot to your server, or join the [discord community  server](https://discord.gg/BQbVNJfwvj) to be able to use the commands.
 Afterwards, you can start playing by using any slash commands of the bot. If you don't know what slash commands are, you can read about them [here](https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ). One of the main command you can do is `/slot` which is the basic command to aquire items.
-If you want to have more details about the commands, you can read the [documentation](/en/documentation/commands/slot) for all of them.
+
+You can use the `/help` command to get a list of all the commands available and a short summary of what they do.
 
 ## Community Discord
 
