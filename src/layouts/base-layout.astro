@@ -2,6 +2,7 @@
 import '../styles/index.css';
 import i18next from 'i18next';
 import Header from '../components/header/header.astro';
+import { HeadHrefLangs } from 'astro-i18next/components';
 
 export interface Props {
   title: string;
@@ -32,6 +33,8 @@ const { title, headerSticky = false, showHeader = true } = Astro.props;
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <HeadHrefLangs />
   </head>
   <body class="min-h-screen bg-default text-base text-default">
     {showHeader && <Header headerSticky={headerSticky} />}
