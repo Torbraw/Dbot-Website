@@ -9,4 +9,4 @@ Advancements are a way to track your progress in the game. They are also a way t
 
 Some advancements are also linked to titles. When you earn those advancements, you will also earn the associated title. You can equip a title with the `/set-title` command and your equipped title will be displayed in your profile (`/profile`).
 
-To see the lists of all the advancements and their titles, you can visit the [encyclopedia](/en/encyclopedia/quest-ressources).
+To see the lists of all the advancements and their titles, you can visit the [encyclopedia](/en/encyclopedia/advancements).
