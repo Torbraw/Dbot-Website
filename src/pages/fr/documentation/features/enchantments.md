@@ -1,0 +1,10 @@
+---
+title: Enchantements
+layout: ../../../../layouts/documentation-layout.astro
+---
+
+Vous pouvez enchanter vos items en utilisant des gemmes d'enchantement <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'> avec la commande `/enchant`.
+
+Plus la rareté de votre item est élevée, plus vous aurez besoin de gemmes d'enchantement pour l'enchanter et plus les chances de succès seront faibles.
+
+Si vous réussissez, vous obtiendrez soit un enchantement à une ou deux étoiles, représenté par * ou ** à la fin du nom de l'item. La différence entre les deux est que l'enchantement à deux étoiles a un boost de statistiques légèrement plus élevé, mais le gain de statistiques principal est un item non enchanté vers un item enchanté.

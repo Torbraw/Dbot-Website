@@ -3,8 +3,7 @@ title: Players
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
-Each discord account is linked to a player account, that means that your progress is saved between different discord servers and you can play on multiple servers.
-On the other hand, you need to make sur you are always playing on the same discord account.
+Each discord account is linked to a player account, that means that your progress is saved between different discord servers and you can play on multiple servers. On the other hand, you need to make sur you are always playing on the same discord account.
 
 ## Stats
 
@@ -14,4 +13,4 @@ Players can also have [items](/en/documentation/features/items), that is used to
 
 ## Related commands
 
-If you think your are the best player their is, you can see the top players accross all server by using the `/rank` command.
+If you think your are the best player their is, you can see the ranking of the top players across all server by using the `/rank` command.

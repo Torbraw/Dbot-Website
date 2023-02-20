@@ -10,15 +10,15 @@ You can see the items you have with the `/inventory` command and you can equip t
 
 They are 9 types of items:
 
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Weapon.png'> **Weapon** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Shield.png'> **Shield** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Helmet.png'> **Helmet**- Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Amulet.png'> **Amulet** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Bracers.png'> **Bracers** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Ring.png'> **Ring** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Chestplate.png'> **Chestplate** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'> and <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Pants.png'> **Pants** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
-- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Boots.png'> **Boots** - Gives <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Weapon.png'> **Weapon** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Shield.png'> **Shield** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Helmet.png'> **Helmet**- Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Amulet.png'> **Amulet** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Bracers.png'> **Bracers** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Ring.png'> **Ring** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Chestplate.png'> **Chestplate** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'> and <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Pants.png'> **Pants** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
+- <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Boots.png'> **Boots** - Given stats: <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png'>
 
 ## Obtaining items
 

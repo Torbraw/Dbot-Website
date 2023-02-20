@@ -1,5 +1,5 @@
 ---
-title: Enchanting
+title: Enchantments
 layout: ../../../../layouts/documentation-layout.astro
 ---
 
