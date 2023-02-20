@@ -1,6 +1,7 @@
 ---
 import type { MarkdownHeading } from 'astro';
 import GradientText from '../common/gradient-text.astro';
+import Trans from '../common/trans.astro';
 
 export interface Props {
   headings: MarkdownHeading[];
@@ -14,7 +15,7 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
 <nav>
   <div>
     <h2 class="py-2 text-lg font-semibold" id="toc-heading">
-      <GradientText>On this page</GradientText>
+      <GradientText><Trans key="documentation:onThisPage"/></GradientText>
     </h2>
     <ul class="mb-2 list-none">
       {
