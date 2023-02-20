@@ -1,10 +1,12 @@
 ---
 import type { NavItem } from '../../types';
-import i18next, { t } from 'i18next';
+import { t } from 'i18next';
 import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
 import Icon from 'astro-icon';
 import { LanguageSelect } from './language-select';
+import { getLanguageFromURL } from '../../utils';
+import Trans from '../common/trans.astro';
 
 export interface Props {
   headerSticky: boolean;
@@ -12,11 +14,11 @@ export interface Props {
 
 const { headerSticky } = Astro.props;
 
-const currentLanguage = i18next.language;
+const lang = getLanguageFromURL(Astro.url.pathname);
 
 const navItems: Array<NavItem> = [
-  { title: t('header:documentation'), url: `/${currentLanguage}/documentation/introduction` },
-  { title: t('header:encyclopedia'), url: `/${currentLanguage}/encyclopedia/intro` },
+  { title: t('header:documentation', { lng: lang }), url: `/${lang}/documentation/introduction` },
+  { title: t('header:encyclopedia', { lng: lang }), url: `/${lang}/encyclopedia/intro` },
 ];
 ---
 
@@ -28,7 +30,7 @@ const navItems: Array<NavItem> = [
     { 'sticky top-0 bg-default': headerSticky },
   ]}
 >
-  <Link href={`/${currentLanguage}`}>
+  <Link href={`/${lang}`}>
     <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
   </Link>
   <div>
@@ -48,7 +50,7 @@ const navItems: Array<NavItem> = [
       </nav>
       <LanguageSelect client:load />
       <Link href={INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
-        {t('header:addToServer')}
+        <Trans key="header:addToServer" />
       </Link>
       <button
         type="button"

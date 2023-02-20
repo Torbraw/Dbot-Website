@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
-import i18next from 'i18next';
 import { SIDEBAR } from '../../config';
+import { getLanguageFromURL } from '../../utils';
 import GradientText from '../common/gradient-text.astro';
 
 export interface Props {
@@ -9,10 +9,12 @@ export interface Props {
 }
 
 const { currentPage } = Astro.props;
+const lang = getLanguageFromURL(Astro.url.pathname);
+
 const hasTrailing = currentPage.endsWith('/');
 const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
-const currentLanguage = i18next.language;
-const sidebar = SIDEBAR[currentLanguage];
+
+const sidebar = SIDEBAR[lang];
 ---
 
 <div class="h-[32] px-4 text-right">

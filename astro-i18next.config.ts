@@ -1,9 +1,9 @@
+import { LANGUAGES } from './src/config';
 import type { AstroI18nextConfig } from "astro-i18next";
 
 const config: AstroI18nextConfig = {
   defaultLocale: "en",
-  showDefaultLocale: true,
-  locales: ["en", "fr"],
+  locales: Object.keys(LANGUAGES),
   namespaces: ["index", "header", "footer", "404"],
   defaultNamespace: "index",
 };

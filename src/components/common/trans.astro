@@ -1,0 +1,15 @@
+---
+import { t } from 'i18next';
+import { getLanguageFromURL, interpolateString } from '../../utils';
+
+export interface Props {
+  key: string;
+}
+const { key } = Astro.props;
+const lang = getLanguageFromURL(Astro.url.pathname);
+
+let localizedString = t(key, { lng: lang });
+const referenceString = await Astro.slots.render('default');
+---
+
+<Fragment set:html={interpolateString(localizedString, referenceString)} />

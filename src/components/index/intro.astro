@@ -1,12 +1,15 @@
 ---
 import { t } from 'i18next';
-import { Trans } from 'astro-i18next/components';
+import { getLanguageFromURL } from '../../utils';
+import Trans from '../common/trans.astro';
 
 import ContentSection from './content-section.astro';
+
+const lang = getLanguageFromURL(Astro.url.pathname);
 ---
 
-<ContentSection title={t('intro.title')}>
+<ContentSection title={t('intro.title', { lng: lang })}>
   <Fragment slot="main">
-    <Trans i18nKey="intro.desc"><span class="text-primary"></span></Trans>
+    <Trans key="intro.desc"><span class="text-primary"></span></Trans>
   </Fragment>
 </ContentSection>

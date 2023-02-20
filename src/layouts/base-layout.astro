@@ -1,8 +1,8 @@
 ---
 import '../styles/index.css';
-import i18next from 'i18next';
 import Header from '../components/header/header.astro';
 import { HeadHrefLangs } from 'astro-i18next/components';
+import { getLanguageFromURL } from '../utils';
 
 export interface Props {
   title: string;
@@ -11,10 +11,11 @@ export interface Props {
 }
 
 const { title, headerSticky = false, showHeader = true } = Astro.props;
+const lang = getLanguageFromURL(Astro.url.pathname);
 ---
 
 <!DOCTYPE html>
-<html class="dbot-scrollbar h-full bg-offset motion-safe:scroll-smooth" data-theme="dark" lang={i18next.language}>
+<html class="dbot-scrollbar h-full bg-offset motion-safe:scroll-smooth" data-theme="dark" lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

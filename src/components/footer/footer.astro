@@ -1,11 +1,8 @@
 ---
-import i18next, { t } from 'i18next';
 import type { FooterLink } from '../../types';
 import { Icon } from 'astro-icon';
 import Link from '../common/link.astro';
 import { DBOT_DISCORD_LINK } from '../../config';
-
-const currentLanguage = i18next.language;
 
 const links: Array<FooterLink> = [
   {

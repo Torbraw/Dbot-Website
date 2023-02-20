@@ -1,9 +1,7 @@
 import type { Component } from 'solid-js';
 import { createSignal, onMount, onCleanup } from 'solid-js';
-import i18next from 'i18next';
 import ISO6991 from 'iso-639-1';
-
-const supportedLanguages = i18next.languages;
+import { LANGUAGES } from '../../config';
 
 export const LanguageSelect: Component = () => {
   const [isDropdownOpen, setIsDropdownOpen] = createSignal<boolean>(false);
@@ -63,7 +61,7 @@ export const LanguageSelect: Component = () => {
       <div class="relative" id="lang-dropdown">
         {isDropdownOpen() && (
           <div class="focus-none shadow-l absolute right-0 mt-2 rounded-lg border-2 bg-default focus:outline-none focus-visible:outline-none">
-            {supportedLanguages.map((supportedLanguage: string) => (
+            {Object.keys(LANGUAGES).map((supportedLanguage: string) => (
               <div>
                 <button
                   class="w-full cursor-pointer rounded-lg border-2 border-transparent py-2 px-4 text-left transition-colors duration-200 hover:bg-offset hover:text-secondary-offset"

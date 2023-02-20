@@ -1,50 +1,51 @@
 ---
-import i18next, { t } from 'i18next';
-import { Trans } from 'astro-i18next/components';
+import { t } from 'i18next';
 import { Icon } from 'astro-icon';
 import ContentSection from './content-section.astro';
 import type { FeatureItem } from '../../types';
 import Link from '../common/link.astro';
+import { getLanguageFromURL } from '../../utils';
+import Trans from '../common/trans.astro';
 
-const currentLanguage = i18next.language;
+const lang = getLanguageFromURL(Astro.url.pathname);
 
 const features: Array<FeatureItem> = [
   {
-    title: t('features.equipments.title'),
-    description: t('features.equipments.desc'),
+    title: t('features.equipments.title', { lng: lang }),
+    description: t('features.equipments.desc', { lng: lang }),
     icon: 'ph:sword-light',
   },
   {
-    title: t('features.pve.title'),
-    description: t('features.pve.desc'),
+    title: t('features.pve.title', { lng: lang }),
+    description: t('features.pve.desc', { lng: lang }),
     icon: 'ph:alien-light',
   },
   {
-    title: t('features.pvp.title'),
-    description: t('features.pvp.desc'),
+    title: t('features.pvp.title', { lng: lang }),
+    description: t('features.pvp.desc', { lng: lang }),
     icon: 'akar-icons:double-sword',
   },
   {
-    title: t('features.quests.title'),
-    description: t('features.quests.desc'),
+    title: t('features.quests.title', { lng: lang }),
+    description: t('features.quests.desc', { lng: lang }),
     icon: 'ic:outline-menu-book',
   },
   {
-    title: t('features.enchantments.title'),
-    description: t('features.enchantments.desc'),
+    title: t('features.enchantments.title', { lng: lang }),
+    description: t('features.enchantments.desc', { lng: lang }),
     icon: 'bi:gem',
   },
   {
-    title: t('features.achievements.title'),
-    description: t('features.achievements.desc'),
+    title: t('features.achievements.title', { lng: lang }),
+    description: t('features.achievements.desc', { lng: lang }),
     icon: 'ph:trophy-light',
   },
 ];
 ---
 
-<ContentSection title={t('features.title')}>
+<ContentSection title={t('features.title', { lng: lang })}>
   <Fragment slot="main">
-    <Trans i18nKey="features.desc"><span class="text-primary"></span></Trans>
+    <Trans key="features.desc"><span class="text-primary"></span></Trans>
   </Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
@@ -60,8 +61,8 @@ const features: Array<FeatureItem> = [
     }
   </ul>
   <span class="!mt-0 w-full max-w-6xl text-right text-sm">
-    <Link href={`/${currentLanguage}/documentation/introduction`} isPrimary={true}>
-      {t('features.seeDocumentation')}
+    <Link href={`/${lang}/documentation/introduction`} isPrimary={true}>
+      <Trans key="features.seeDocumentation" />
     </Link>
   </span>
 </ContentSection>

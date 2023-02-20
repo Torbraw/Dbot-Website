@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import i18next from 'i18next';
-import { paginate } from '../../utils';
+import { getLanguageFromURL, paginate } from '../../utils';
 import Link from '../common/link.astro';
 
 export interface Props {
@@ -9,11 +8,11 @@ export interface Props {
 }
 
 const { currentPage } = Astro.props;
-const currentLanguage = i18next.language;
+const lang = getLanguageFromURL(Astro.url.pathname);
 
 const hasTrailing = currentPage.endsWith('/');
 const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
-const { next, prev } = paginate(currentLanguage, currentPageMatch);
+const { next, prev } = paginate(lang, currentPageMatch);
 ---
 
 <div class="my-8 flex w-full flex-row items-center justify-between font-medium">
