@@ -1,6 +1,5 @@
 ---
 title: PVP
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Vous pouvez défier d'autres joueurs dans une bataille pvp avec la commande `/pvp` **uniquement** dans le salon pvp. Lisez la [documentation des serveurs](/fr/documentation/features/servers) pour savoir comment le configurer. La bataille est un système au tour par tour et le premier à atteindre 0 points de vie perd.

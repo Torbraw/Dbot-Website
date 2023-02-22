@@ -1,6 +1,5 @@
 ---
 title: PVP
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 You can challenge other players in a pvp battle with the `/pvp` command **only** in the pvp channel. Read the [servers docs](/en/documentation/features/servers) to know how to set it up. The battle is a turn based system and the first to reach 0 health loses.

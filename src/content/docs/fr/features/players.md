@@ -1,6 +1,5 @@
 ---
 title: Joueurs
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Chaque compte discord est lié à un compte joueur, cela signifie que votre progression est enregistrée entre différents serveurs discord et que vous pouvez jouer sur plusieurs serveurs. D'autre part, vous devez vous assurer que vous jouez toujours sur le même compte discord.

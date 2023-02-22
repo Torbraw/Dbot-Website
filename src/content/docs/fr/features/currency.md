@@ -1,6 +1,5 @@
 ---
 title: Monnaies
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Il existe trois types de monnaie dans le jeu : les pièces <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Coins.png'>,

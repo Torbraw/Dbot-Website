@@ -1,6 +1,5 @@
 ---
 title: PVE
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Monsters are randomly spawned **only** in the pve channel, read the [servers docs](/en/documentation/features/servers) to know how to set it up. There is four rarity levels. The higher the rarity, the more health the monster has and the lower the chance of spawning is.

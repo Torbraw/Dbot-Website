@@ -1,6 +1,5 @@
 ---
 title: PVE
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Les monstres apparaissent aléatoirement **uniquement** dans le salon pve, lisez la [documentation des serveurs](/fr/documentation/features/servers) pour savoir comment le configurer. Il y a quatre niveaux de rareté. Plus la rareté est élevée, plus le monstre à de santé et moindre sont les chances qu'il apparaisse.

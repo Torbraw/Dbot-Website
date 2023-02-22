@@ -1,6 +1,5 @@
 ---
 title: Introduction
-layout: ../../../layouts/documentation-layout.astro
 ---
 
 Dbot est un RPG simple avec des monstres, du butins, des quêtes, du PVP, un classement et bien plus encore. Tout cela disponible dans Discord via un bot.

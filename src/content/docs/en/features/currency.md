@@ -1,6 +1,5 @@
 ---
 title: Currency
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 They are three types of currency in the game: coins <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Coins.png'>,

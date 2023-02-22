@@ -1,11 +1,10 @@
 ---
 import { t } from 'i18next';
-import { getLanguageFromURL } from '../../utils';
 import Trans from '../common/trans.astro';
 
 import ContentSection from './content-section.astro';
 
-const lang = getLanguageFromURL(Astro.url.pathname);
+const lang = Astro.params.lang || 'en';
 ---
 
 <ContentSection title={t('intro.title', { lng: lang })}>

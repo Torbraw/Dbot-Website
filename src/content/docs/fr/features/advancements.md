@@ -1,6 +1,5 @@
 ---
 title: Avancements
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Les avancements sont un moyen de suivre votre progression dans le jeu. Ils sont aussi un moyen de montrer vos réalisations. Presque toutes les actions du jeu vous font progresser vers certains avancements. Vous pouvez voir vos avancements gagnés avec la commande `/inventory`.

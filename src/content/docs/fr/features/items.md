@@ -1,6 +1,5 @@
 ---
 title: Items
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Les items sont au coeur du jeu. Ils sont utilisés pour augmenter vos statistiques et vous donner une meilleure chance de gagner des batailles. Il existe quatre raretés d'items: commun <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Common.png'>, rare <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Rare.png'>, épique <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Epic.png'> et légendaire <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Legendary.png '>. Plus la rareté est élevée, meilleur est l'item mais aussi plus il est difficile à obtenir.  

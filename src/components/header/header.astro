@@ -5,7 +5,6 @@ import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
 import Icon from 'astro-icon';
 import { LanguageSelect } from './language-select';
-import { getLanguageFromURL } from '../../utils';
 import Trans from '../common/trans.astro';
 
 export interface Props {
@@ -13,8 +12,7 @@ export interface Props {
 }
 
 const { headerSticky } = Astro.props;
-
-const lang = getLanguageFromURL(Astro.url.pathname);
+const lang = Astro.params.lang || 'en';
 
 const navItems: Array<NavItem> = [
   { title: t('header:documentation', { lng: lang }), url: `/${lang}/documentation/introduction` },

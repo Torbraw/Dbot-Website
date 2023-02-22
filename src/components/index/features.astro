@@ -4,10 +4,9 @@ import { Icon } from 'astro-icon';
 import ContentSection from './content-section.astro';
 import type { FeatureItem } from '../../types';
 import Link from '../common/link.astro';
-import { getLanguageFromURL } from '../../utils';
 import Trans from '../common/trans.astro';
 
-const lang = getLanguageFromURL(Astro.url.pathname);
+const lang = Astro.params.lang || 'en';
 
 const features: Array<FeatureItem> = [
   {

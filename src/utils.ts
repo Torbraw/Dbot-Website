@@ -1,3 +1,4 @@
+import type { CollectionEntry } from 'astro:content';
 import { SIDEBAR, Sidebar, SidebarContent } from './config';
 
 export function paginate(
@@ -10,11 +11,6 @@ export function paginate(
   const prev = index > 0 ? routes[index - 1] : undefined;
   const next = index < routes.length - 1 ? routes[index + 1] : undefined;
   return { prev, next };
-}
-
-export function getLanguageFromURL(pathname: string): string {
-  const langCodeMatch = pathname.match(/\/([a-z]{2}-?[a-z]{0,2})\//);
-  return langCodeMatch ? langCodeMatch[1] : 'en';
 }
 
 export function interpolateString(localizedString: string, referenceString: string): string {
@@ -54,3 +50,9 @@ export function interpolateString(localizedString: string, referenceString: stri
   }
   return localizedString;
 }
+
+/** Get a page’s slug, without the language prefix (e.g. `'en/migrate'` => `'migrate'`). */
+export const stripLangFromSlug = (slug: CollectionEntry<'docs'>['slug']): string => slug.split('/').slice(1).join('/');
+
+/** Get a page’s lang tag from its slug (e.g. `'en/migrate'` => `'en'`). */
+export const getLangFromSlug = (slug: CollectionEntry<'docs'>['slug']): string => slug.split('/')[0];

@@ -1,6 +1,5 @@
 ---
 title: Enchantments
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 You can enchant your items using enchant gems <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'> with the `/enchant` command.

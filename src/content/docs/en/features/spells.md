@@ -1,6 +1,5 @@
 ---
 title: Spells
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Spells are another way to attack your opponent. They are more powerful than the normal attacks, but they cost mana so they are not infite in contrast to normal attacks. You can have a maximum of 3 spells equipped at the same time. To use a spell, you simply need to select it when it's your turn like you would with a normal attack.

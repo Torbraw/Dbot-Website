@@ -2,7 +2,6 @@
 import '../styles/index.css';
 import Header from '../components/header/header.astro';
 import { HeadHrefLangs } from 'astro-i18next/components';
-import { getLanguageFromURL } from '../utils';
 
 export interface Props {
   title: string;
@@ -11,7 +10,7 @@ export interface Props {
 }
 
 const { title, headerSticky = false, showHeader = true } = Astro.props;
-const lang = getLanguageFromURL(Astro.url.pathname);
+const lang = Astro.params.lang || 'en';
 ---
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import { getLanguageFromURL, paginate } from '../../utils';
+import { paginate } from '../../utils';
 import Link from '../common/link.astro';
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const { currentPage } = Astro.props;
-const lang = getLanguageFromURL(Astro.url.pathname);
+const lang = Astro.params.lang || 'en';
 
 const hasTrailing = currentPage.endsWith('/');
 const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);

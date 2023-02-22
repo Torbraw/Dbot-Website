@@ -1,6 +1,5 @@
 ---
 title: Sorts
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Les sorts sont un autre moyen d'attaquer votre adversaire. Ils sont plus puissants que les attaques normales, mais ils coûtent du mana donc ils ne sont donc pas infinies contrairement aux attaques normales. Vous pouvez avoir un maximum de 3 sorts équipés en même temps. Pour utiliser un sort, il vous suffit de le sélectionner lorsque c'est votre tour comme vous le feriez avec une attaque normale.

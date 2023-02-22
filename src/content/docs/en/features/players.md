@@ -1,6 +1,5 @@
 ---
 title: Players
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Each discord account is linked to a player account, that means that your progress is saved between different discord servers and you can play on multiple servers. On the other hand, you need to make sur you are always playing on the same discord account.

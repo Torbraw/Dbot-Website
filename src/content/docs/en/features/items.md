@@ -1,6 +1,5 @@
 ---
 title: Items
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Items are the core of the game. They are used to boost your stats and give you a better chance of winning battles. They are four rarities of items: common <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Common.png'>, rare <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Rare.png'>, epic <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Epic.png'> and legendary <img src='https://d2lqwktucnc67y.cloudfront.net/icons/Legendary.png'>. The higher the rarity, the better the item is but also the harder it is to get.  

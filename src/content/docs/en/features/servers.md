@@ -1,6 +1,5 @@
 ---
 title: Servers
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 A server is a discord server where you can play the game. You can create your own server or join an existing one.

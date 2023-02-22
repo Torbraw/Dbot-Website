@@ -1,16 +1,16 @@
 ---
 import { Icon } from 'astro-icon';
-import type { Frontmatter } from '../../types';
+import type { CollectionEntry } from 'astro:content';
 import GradientText from '../common/gradient-text.astro';
 import Pagination from './pagination.astro';
 
 export interface Props {
-  frontmatter: Frontmatter;
+  content: CollectionEntry<'docs'>['data'];
   currentPage: string;
 }
 
-const { frontmatter, currentPage } = Astro.props;
-const title = frontmatter.title;
+const { content, currentPage } = Astro.props;
+const title = content.title;
 ---
 
 <article id="article" class="flex w-full max-w-screen-md flex-col">

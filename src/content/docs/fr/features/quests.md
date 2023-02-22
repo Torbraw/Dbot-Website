@@ -1,6 +1,5 @@
 ---
 title: Quêtes
-layout: ../../../../layouts/documentation-layout.astro
 ---
 
 Vous pouvez vous lancer dans des quêtes pour gagner des récompenses avec la commande `/quest`. Il existe plusieurs types de quêtes, chacune avec son propre gameplay. Comme beaucoup de choses dans le jeu, il y a quatre niveaux de rareté, plus la rareté est élevée, plus la quête est difficile mais meilleures sont les récompenses que vous obtenez.
