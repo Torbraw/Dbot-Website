@@ -1,11 +1,11 @@
 ---
 import type { NavItem } from '../../types';
 import { t } from 'i18next';
-import { CLOUDFRONT_BASE_URL, INVITE_LINK } from '../../config';
 import Link from '../common/link.astro';
 import Icon from 'astro-icon';
 import { LanguageSelect } from './language-select';
 import Trans from '../common/trans.astro';
+const { PUBLIC_INVITE_LINK, PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
 
 export interface Props {
   headerSticky: boolean;
@@ -29,7 +29,7 @@ const navItems: Array<NavItem> = [
   ]}
 >
   <Link href={`/${lang}`}>
-    <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
+    <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
   </Link>
   <div>
     <div class="flex items-center gap-6">
@@ -47,7 +47,7 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav>
       <LanguageSelect client:load />
-      <Link href={INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
+      <Link href={PUBLIC_INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
         <Trans key="header:addToServer" />
       </Link>
       <button
@@ -71,7 +71,7 @@ const navItems: Array<NavItem> = [
         </header>
         <div class="flex justify-center pb-4">
           <Link href="/">
-            <img alt="icon" src={`${CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-20 w-20" />
+            <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-20 w-20" />
           </Link>
         </div>
         <nav>

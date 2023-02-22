@@ -2,7 +2,7 @@
 import type { FooterLink } from '../../types';
 import { Icon } from 'astro-icon';
 import Link from '../common/link.astro';
-import { DBOT_DISCORD_LINK } from '../../config';
+const { DBOT_DISCORD_LINK } = import.meta.env;
 
 const links: Array<FooterLink> = [
   {
