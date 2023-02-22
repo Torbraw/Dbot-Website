@@ -14,6 +14,7 @@ import solidJs from '@astrojs/solid-js';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dbot.com',
+  output: 'server',
   integrations: [
     tailwind(),
     image({
