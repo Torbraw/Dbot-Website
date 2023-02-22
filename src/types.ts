@@ -19,6 +19,12 @@ export type EncyclopediaParams = {
   id: string;
 };
 
+export type EncyclopediaItem = {
+  name: string;
+  icon: string;
+  link: string;
+};
+
 export type UpstashResponse = {
   result: string;
 };

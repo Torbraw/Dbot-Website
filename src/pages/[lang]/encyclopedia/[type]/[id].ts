@@ -1,5 +1,5 @@
 import type { APIContext } from 'astro';
-import type { EncyclopediaParams, UpstashResponse } from '../../../types';
+import type { EncyclopediaParams, UpstashResponse } from '../../../../types';
 const { UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN } = import.meta.env;
 
 //achievement:628c262e59c07a92c4d3c70a

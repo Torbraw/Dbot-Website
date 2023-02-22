@@ -1,3 +1,8 @@
 {
-  "pageTitle": "Encyclopedie"
+  "title": "Encyclopedie",
+  "items": "Items",
+  "spells": "Sorts",
+  "monsters": "Monstres",
+  "achievements": "Succès",
+  "questRessources": "Ressources de quêtes"
 }
