@@ -19,4 +19,4 @@ Les pièces de sang sont obtenues **uniquement** en tuant des joueurs. Ils peuve
 
 ## Gemmes d'enchantements <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'>
 
-Les gemmes d'enchantement sont obtenues en tuant des monstres, en tuant des joueurs et en gagnant à la machine à sous. Ils sont utilisés pour enchanter des items. Vous pouvez en savoir plus à ce sujet [ici](/fr/documentation/features/enchantments).
+Les gemmes d'enchantement sont obtenues en tuant des monstres, en tuant des joueurs et en gagnant à la machine à sous. Ils sont utilisés pour enchanter des items. Vous pouvez en savoir plus à ce sujet [ici](/fr/docs/features/enchantments).

@@ -8,7 +8,7 @@
   "features": {
     "title": "Fonctionnalités",
     "desc": "Dbot regorge de <0>fonctionnalités</0>. Vous pouvez <0>chasser un monstre</0> pour avoir une chance d'obtenir son <0>butin</0> ou même combattre les plus fort dans une <0>bataille PVP</0>.",
-    "seeDocumentation": "Voir la documentation complète →",
+    "seeDocs": "Voir la documentation complète →",
     "equipments": {
       "title": "Équipements",
       "desc": "Les équipements peuvent être obtenus dans la machine à sous, obtenu sur des monstres, achetés sur le marché ou même fabriqués."

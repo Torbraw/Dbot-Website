@@ -19,4 +19,4 @@ Blood coins are obtained **only** by killing players. They can be used to buy **
 
 ## Enchant gems <img src='https://d2lqwktucnc67y.cloudfront.net/icons/EnchantGems.png'>
 
-Enchant gems are obtained by killing monsters, killing players and winning at the slot machine. They are used to enchant items. You can read more about that [here](/en/documentation/features/enchantments).
+Enchant gems are obtained by killing monsters, killing players and winning at the slot machine. They are used to enchant items. You can read more about that [here](/en/docs/features/enchantments).

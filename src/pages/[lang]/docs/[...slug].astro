@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import DocumentationLayout from '../../../layouts/documentation-layout.astro';
+import DocsLayout from '../../../layouts/docs-layout.astro';
 import { getLangFromSlug, stripLangFromSlug } from '../../../utils';
 
 export async function getStaticPaths() {
@@ -20,6 +20,6 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 
-<DocumentationLayout content={entry.data} headings={headings}>
+<DocsLayout content={entry.data} headings={headings}>
   <Content />
-</DocumentationLayout>
+</DocsLayout>
