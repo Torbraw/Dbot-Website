@@ -1,5 +1,5 @@
 import type { APIContext } from 'astro';
-import type { EncyclopediaParams, UpstashResponse } from '../../../../types';
+import type { EncyclopediaItemParams, UpstashResponse } from '../../../../types';
 const { UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN } = import.meta.env;
 
 //achievement:628c262e59c07a92c4d3c70a
@@ -9,7 +9,7 @@ const { UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN } = import.meta.env;
 //spell:628aeb705a1f543f5e0c8549
 
 export async function get({ params }: APIContext): Promise<Response> {
-  const { type, id } = params as EncyclopediaParams;
+  const { type, id } = params as EncyclopediaItemParams;
 
   const entry = await fetch(`${UPSTASH_REDIS_REST_URL}/JSON.GET/${type}:${id}`, {
     headers: {

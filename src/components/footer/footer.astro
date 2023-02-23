@@ -2,11 +2,11 @@
 import type { FooterLink } from '../../types';
 import { Icon } from 'astro-icon';
 import Link from '../common/link.astro';
-const { DBOT_DISCORD_LINK } = import.meta.env;
+const { PUBLIC_DBOT_DISCORD_LINK } = import.meta.env;
 
 const links: Array<FooterLink> = [
   {
-    url: DBOT_DISCORD_LINK,
+    url: PUBLIC_DBOT_DISCORD_LINK,
     icon: 'fa-brands:discord',
   },
 ];

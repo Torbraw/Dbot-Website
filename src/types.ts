@@ -14,7 +14,16 @@ export type FooterLink = {
   icon: string;
 };
 
-export type EncyclopediaParams = {
+export type EncyclopediaItemListResponse = {
+  entries: UpstashResponse[];
+  nextToken: string;
+};
+
+export type EncyclopediaTypeParams = {
+  type: string;
+};
+
+export type EncyclopediaItemParams = {
   type: string;
   id: string;
 };
@@ -27,6 +36,10 @@ export type EncyclopediaItem = {
 
 export type UpstashResponse = {
   result: string;
+};
+
+export type UpstashScanResponse = {
+  result: (string | string[])[];
 };
 
 // TODO merge those types with the ones from the API

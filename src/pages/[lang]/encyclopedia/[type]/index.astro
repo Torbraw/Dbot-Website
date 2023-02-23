@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../../layouts/base-layout.astro';
+import { t } from 'i18next';
+import type { EncyclopediaItemListResponse } from '../../../../types';
+
+const { lang } = Astro.params;
+
+const url = new URL('/api/encyclopedia/monster/lists', Astro.site);
+const response = await fetch(url, {
+  headers: {
+    'content-type': 'application/json',
+  },
+});
+
+let data: EncyclopediaItemListResponse = {
+  entries: [],
+  nextToken: '',
+};
+if (response.status === 200) {
+  data = (await response.json()) as EncyclopediaItemListResponse;
+}
+---
+
+<BaseLayout headerSticky={true} title={t('encyclopedia:title', { lng: lang })}>
+  <div>
+    {data.entries.map((e) => <div>{e.result}</div>)}
+  </div>
+</BaseLayout>
