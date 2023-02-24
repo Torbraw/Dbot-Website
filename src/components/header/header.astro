@@ -25,7 +25,7 @@ const navItems: Array<NavItem> = [
   class:list={[
     'z-20 flex w-full items-center justify-between border-b border-transparent p-4',
     { 'absolute bottom-0': !headerSticky },
-    { 'sticky top-0 bg-default': headerSticky },
+    { 'sticky top-0 bg-default !border-default': headerSticky },
   ]}
 >
   <Link href={`/${lang}`}>
