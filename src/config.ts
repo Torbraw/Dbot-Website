@@ -1,10 +1,10 @@
+import type { Sidebar } from './types';
+
 export const LANGUAGES = {
   en: 'English',
   fr: 'Français',
 };
 
-export type SidebarContent = { text: string; link: string };
-export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
     'Getting Started': [{ text: 'Introduction', link: 'en/docs/introduction' }],

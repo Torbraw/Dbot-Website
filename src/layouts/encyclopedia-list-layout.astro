@@ -1,0 +1,29 @@
+---
+import { t } from 'i18next';
+import GradientText from '../components/common/gradient-text.astro';
+import Trans from '../components/common/trans.astro';
+import type { Achievement, EncyclopediaItemListResponse } from '../types';
+import BaseLayout from './base-layout.astro';
+
+export type Props = {
+  data: EncyclopediaItemListResponse<Achievement>;
+};
+
+const { lang } = Astro.params;
+const { data } = Astro.props;
+---
+
+<BaseLayout title={t('encyclopedia:title', { lng: lang })} headerSticky={true}>
+  <main class="space-y-24 p-8">
+    <section class="flex flex-col items-center gap-4 space-y-8">
+      <div>
+        <GradientText class="text-center text-5xl sm:text-7xl font-extrabold tracking-tight !leading-tight">
+          <Trans key="encyclopedia:title" />
+        </GradientText>
+      </div>
+    </section>
+    <div class="grid max-w-6xl grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+      {data?.entries.map((e) => <div>{e}</div>)}
+    </div>
+  </main>
+</BaseLayout>

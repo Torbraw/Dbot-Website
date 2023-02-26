@@ -8,4 +8,4 @@ Vous pouvez vous lancer dans des quêtes pour gagner des récompenses avec la co
 
 Lorsque vous terminez une quête, vous gagnez des **ressources de quête** de la rareté de la quête. Vous pouvez voir quelles ressources de quête vous avez avec la commande `/inventory`. Vous pouvez utiliser ces ressources pour fabriquer des items de la même rareté avec la commande `/craft`. Vous pouvez également utiliser les ressources de quête rares pour créer des sorts avec la même commande.
 
-Pour voir les listes des ressources des quêtes, vous pouvez visiter l'[encyclopédie](/fr/encyclopedia/quest-ressources).
+Pour voir les listes des ressources des quêtes, vous pouvez visiter l'[encyclopédie](/fr/encyclopedia/quest-resources).

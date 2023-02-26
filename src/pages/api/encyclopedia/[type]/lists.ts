@@ -38,7 +38,7 @@ export async function get({ params, request }: APIContext): Promise<Response> {
   return new Response(
     JSON.stringify({
       nextToken: nextToken as string,
-      entries: entriesResponse,
+      entries: entriesResponse.map((entry) => JSON.parse(entry.result) as unknown),
     }),
     {
       status: 200,

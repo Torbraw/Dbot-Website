@@ -14,8 +14,12 @@ export type FooterLink = {
   icon: string;
 };
 
-export type EncyclopediaItemListResponse = {
-  entries: UpstashResponse[];
+export type SidebarContent = { text: string; link: string };
+
+export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
+
+export type EncyclopediaItemListResponse<T> = {
+  entries: T[];
   nextToken: string;
 };
 
@@ -23,15 +27,8 @@ export type EncyclopediaTypeParams = {
   type: string;
 };
 
-export type EncyclopediaItemParams = {
-  type: string;
+export type EncyclopediaItemParams = EncyclopediaTypeParams & {
   id: string;
-};
-
-export type EncyclopediaItem = {
-  name: string;
-  icon: string;
-  link: string;
 };
 
 export type UpstashResponse = {
@@ -55,12 +52,9 @@ export type Stats = {
 
 export type Item = {
   name: StringI18n;
-  emojiId: string;
   stats: Stats[];
   type: string;
   rarity: number;
-  availability: string;
-  enchantTier?: string;
   iconName: string;
 };
 
@@ -68,5 +62,23 @@ export type Monster = {
   name: StringI18n;
   rarity: number;
   loots: Item[];
+  iconName: string;
+};
+
+export type Spell = {
+  name: StringI18n;
+  description: StringI18n;
+  manaCost: number;
+  iconName: string;
+};
+
+export type Achievement = {
+  name: StringI18n;
+  title?: StringI18n;
+};
+
+export type QuestResource = {
+  name: StringI18n;
+  rarity: number;
   iconName: string;
 };

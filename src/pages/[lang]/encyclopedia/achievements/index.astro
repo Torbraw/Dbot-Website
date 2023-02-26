@@ -1,0 +1,19 @@
+---
+import type { Achievement, EncyclopediaItemListResponse } from '../../../../types';
+import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
+
+const url = new URL('/api/encyclopedia/achievement/lists', Astro.site);
+const response = await fetch(url, {
+  headers: {
+    'content-type': 'application/json',
+  },
+});
+
+let data = null;
+if (response.status === 200) {
+  data = (await response.json()) as EncyclopediaItemListResponse<Achievement>;
+}
+---
+
+{!data && <div>TODO Erreur</div>}
+{data && <EncyclopediaListLayout data={data} />}
