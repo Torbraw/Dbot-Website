@@ -1,0 +1,26 @@
+---
+import type { Achievement, EncyclopediaItemListResponse, StringI18n } from '../../../types';
+import ListWrapper from '../list-wrapper.astro';
+import AchievementListItem from './achievement-list-item.astro';
+
+export type Props = {
+  data: EncyclopediaItemListResponse<Achievement>;
+};
+
+const { lang = 'en' } = Astro.params;
+const { data } = Astro.props;
+---
+
+<ListWrapper isHeader={true}>
+  <AchievementListItem name="Name" title="Title" />
+</ListWrapper>
+{
+  data.entries.map((e) => (
+    <ListWrapper>
+      <AchievementListItem
+        name={e.name[lang as keyof StringI18n]}
+        title={e.title ? e.title[lang as keyof StringI18n] : '---'}
+      />
+    </ListWrapper>
+  ))
+}

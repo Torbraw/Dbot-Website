@@ -1,0 +1,11 @@
+---
+export type Props = {
+  name: string;
+  title: string;
+};
+
+const { name, title } = Astro.props;
+---
+
+<div class="flex-1 text-left">{name}</div>
+<div class="flex-1 text-left">{title}</div>

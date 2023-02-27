@@ -1,6 +1,10 @@
 ---
+import { t } from 'i18next';
 import type { Achievement, EncyclopediaItemListResponse } from '../../../../types';
 import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
+import AchievementList from '../../../../components/encyclopedia/achievements/achievement-list.astro';
+
+const { lang } = Astro.params;
 
 const url = new URL('/api/encyclopedia/achievement/lists', Astro.site);
 const response = await fetch(url, {
@@ -16,4 +20,10 @@ if (response.status === 200) {
 ---
 
 {!data && <div>TODO Erreur</div>}
-{data && <EncyclopediaListLayout data={data} />}
+{
+  data && (
+    <EncyclopediaListLayout title={t('encyclopedia:achievements', { lng: lang })}>
+      <AchievementList data={data} />
+    </EncyclopediaListLayout>
+  )
+}
