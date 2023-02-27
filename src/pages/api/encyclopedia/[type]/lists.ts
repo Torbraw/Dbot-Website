@@ -32,13 +32,12 @@ export async function get({ params, request }: APIContext): Promise<Response> {
     },
     method: 'POST',
     body: JSON.stringify((ids as string[]).map((id) => ['JSON.GET', id])),
-  });
+  }).then((res) => res.json() as Promise<UpstashResponse[]>);
 
-  const entriesResponse = (await entries.json()) as UpstashResponse[];
   return new Response(
     JSON.stringify({
       nextToken: nextToken as string,
-      entries: entriesResponse.map((entry) => JSON.parse(entry.result) as unknown),
+      entries: entries.map((entry) => JSON.parse(entry.result) as unknown),
     }),
     {
       status: 200,
