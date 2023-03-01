@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18next';
 import type { Achievement, EncyclopediaItemListResponse, StringI18n } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
 import AchievementListItem from './achievement-list-item.astro';
@@ -12,7 +13,7 @@ const { data } = Astro.props;
 ---
 
 <ListWrapper isHeader={true}>
-  <AchievementListItem name="Name" title="Title" />
+  <AchievementListItem name={t('encyclopedia:name', { lng: lang })} title={t('encyclopedia:title', { lng: lang })} />
 </ListWrapper>
 {
   data.entries.map((e) => (

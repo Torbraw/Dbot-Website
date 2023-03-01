@@ -1,8 +1,10 @@
 {
-  "title": "Encyclopedia",
+  "pageTitle": "Encyclopedia",
   "items": "Items",
   "spells": "Spells",
   "monsters": "Monsters",
   "achievements": "Achievements",
-  "questResources": "Quest Resources"
+  "questResources": "Quest Resources",
+  "title": "Title",
+  "name": "Name"
 }
