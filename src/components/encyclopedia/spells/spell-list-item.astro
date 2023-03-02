@@ -12,7 +12,7 @@ export type Props = {
 const { name, manaCost, iconName = '', description, isHeader = false } = Astro.props;
 ---
 
-<div class="flex-auto basis-1/12 self-center text-left">
+<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
   {
     !isHeader && (
       <img
@@ -22,8 +22,8 @@ const { name, manaCost, iconName = '', description, isHeader = false } = Astro.p
     )
   }
 </div>
-<div class="flex-auto basis-2/12 pl-2 text-left text-xs sm:text-sm lg:text-base">{name}</div>
-<div class="flex-auto basis-7/12 text-left text-xs sm:text-sm lg:text-base">{description}</div>
+<div class="flex-auto basis-3/12 pl-2 text-left text-xs sm:basis-2/12 sm:text-sm lg:text-base">{name}</div>
+<div class="flex-auto basis-9/12 text-left text-xs sm:basis-7/12 sm:text-sm lg:text-base">{description}</div>
 <div class="hidden flex-auto basis-1/12 pl-2 text-left text-xs sm:text-sm lg:text-base xl:block">
   {manaCost}
   {
