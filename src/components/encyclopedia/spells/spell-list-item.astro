@@ -17,7 +17,7 @@ const { name, manaCost, iconName = '', description, isHeader = false } = Astro.p
     !isHeader && (
       <img
         class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-        src={`${PUBLIC_CLOUDFRONT_BASE_URL}spells/${iconName}.png`}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/spells/${iconName}.png`}
       />
     )
   }
@@ -32,7 +32,7 @@ const { name, manaCost, iconName = '', description, isHeader = false } = Astro.p
     !isHeader && (
       <>
         &nbsp;
-        <img class="inline h-[32px] w-[32px]" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/Mana.png`} />
+        <img class="inline h-[32px] w-[32px]" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/Mana.png`} />
       </>
     )
   }

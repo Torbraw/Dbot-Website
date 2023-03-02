@@ -20,7 +20,7 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
     !isHeader && (
       <img
         class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-        src={`${PUBLIC_CLOUDFRONT_BASE_URL}monsters/512/${iconName}.png`}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/monsters/512/${iconName}.png`}
       />
     )
   }
@@ -34,7 +34,7 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
         // TODO Add tooltip of link to item detail
         <img
           class="inline h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-          src={`${PUBLIC_CLOUDFRONT_BASE_URL}${loot.type.toLowerCase()}/${loot.iconName}.png`}
+          src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${loot.type.toLowerCase()}/${loot.iconName}.png`}
         />
       ))
   }

@@ -17,7 +17,7 @@ const { name, iconName = '', rarity, isHeader = false } = Astro.props;
     !isHeader && (
       <img
         class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-        src={`${PUBLIC_CLOUDFRONT_BASE_URL}quest-resources/${iconName}.png`}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/quest-resources/${iconName}.png`}
       />
     )
   }
