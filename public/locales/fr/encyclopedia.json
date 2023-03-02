@@ -9,5 +9,6 @@
   "name": "Nom",
   "description": "Description",
   "manaCost": "Coût en mana",
-  "rarity": "Rareté"
+  "rarity": "Rareté",
+  "loots": "Butin"
 }

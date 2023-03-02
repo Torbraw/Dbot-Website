@@ -1,0 +1,29 @@
+---
+import { t } from 'i18next';
+import type { EncyclopediaItemListResponse, Monster } from '../../../../types';
+import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
+import MonsterResourceList from '../../../../components/encyclopedia/monsters/monster-list.astro';
+
+const { lang } = Astro.params;
+
+const url = new URL('/api/encyclopedia/monster/lists', Astro.site);
+const response = await fetch(url, {
+  headers: {
+    'content-type': 'application/json',
+  },
+});
+
+let data = null;
+if (response.status === 200) {
+  data = (await response.json()) as EncyclopediaItemListResponse<Monster>;
+}
+---
+
+{!data && <div>TODO Erreur</div>}
+{
+  data && (
+    <EncyclopediaListLayout title={t('encyclopedia:monsters', { lng: lang })}>
+      <MonsterResourceList data={data} />
+    </EncyclopediaListLayout>
+  )
+}

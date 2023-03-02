@@ -1,0 +1,45 @@
+---
+import { RARITY_URLS } from '../../../config';
+import type { Item } from '../../../types';
+import Trans from '../../common/trans.astro';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  name: string;
+  iconName?: string;
+  rarity: string;
+  loots?: Item[];
+  isHeader?: boolean;
+};
+
+const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
+---
+
+<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
+  {
+    !isHeader && (
+      <img
+        class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}monsters/512/${iconName}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-8/12 text-left sm:basis-4/12">{name}</div>
+<div class="hidden flex-auto basis-6/12 text-left sm:block">
+  {isHeader && <Trans key="encyclopedia:loots" />}
+  {
+    loots &&
+      loots.map((loot) => (
+        // TODO Add tooltip of link to item detail
+        <img
+          class="inline h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+          src={`${PUBLIC_CLOUDFRONT_BASE_URL}${loot.type.toLowerCase()}/${loot.iconName}.png`}
+        />
+      ))
+  }
+</div>
+<div class="flex-initial basis-2/12 text-left sm:basis-1/12">
+  {isHeader && rarity}
+  {!isHeader && <img class="inline" width="24" height="24" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+</div>
