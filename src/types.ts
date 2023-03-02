@@ -37,6 +37,7 @@ export type UpstashResponse = {
 
 export type UpstashScanResponse = {
   result: (string | string[])[];
+  error?: string;
 };
 
 // TODO merge those types with the ones from the API

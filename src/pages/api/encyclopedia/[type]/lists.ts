@@ -16,6 +16,13 @@ export async function get({ params, request }: APIContext): Promise<Response> {
   });
 
   const keysReponse = (await keys.json()) as UpstashScanResponse;
+  if (keysReponse.error) {
+    return new Response(null, {
+      status: 404,
+      statusText: 'Not Found',
+    });
+  }
+
   const [nextToken, ids] = keysReponse.result;
   if ((ids as string[]).length === 0) {
     return new Response(null, {
