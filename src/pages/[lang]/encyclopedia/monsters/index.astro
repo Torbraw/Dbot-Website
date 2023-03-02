@@ -2,7 +2,7 @@
 import { t } from 'i18next';
 import type { EncyclopediaItemListResponse, Monster } from '../../../../types';
 import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
-import MonsterResourceList from '../../../../components/encyclopedia/monsters/monster-list.astro';
+import MonsterList from '../../../../components/encyclopedia/monsters/monster-list.astro';
 
 const { lang } = Astro.params;
 
@@ -23,7 +23,7 @@ if (response.status === 200) {
 {
   data && (
     <EncyclopediaListLayout title={t('encyclopedia:monsters', { lng: lang })}>
-      <MonsterResourceList data={data} />
+      <MonsterList data={data} />
     </EncyclopediaListLayout>
   )
 }
