@@ -1,0 +1,29 @@
+---
+import { RARITY_URLS } from '../../../config';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  name: string;
+  iconName?: string;
+  rarity: string;
+  isHeader?: boolean;
+};
+
+const { name, iconName = '', rarity, isHeader = false } = Astro.props;
+---
+
+<div class="flex-auto basis-1/12 self-center text-left">
+  {
+    !isHeader && (
+      <img
+        class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}quest-resources/${iconName}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-2/12 text-left">{name}</div>
+<div class="flex-initial basis-1/12 text-left">
+  {isHeader && rarity}
+  {!isHeader && <img class="inline" width="24" height="24" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+</div>

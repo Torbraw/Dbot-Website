@@ -1,4 +1,5 @@
 import type { Sidebar } from './types';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
 
 export const LANGUAGES = {
   en: 'English',
@@ -37,3 +38,10 @@ export const SIDEBAR: Sidebar = {
     ],
   },
 };
+
+export const RARITY_URLS = {
+  '0': `${PUBLIC_CLOUDFRONT_BASE_URL}icons/Common.png`,
+  '1': `${PUBLIC_CLOUDFRONT_BASE_URL}icons/Rare.png`,
+  '2': `${PUBLIC_CLOUDFRONT_BASE_URL}icons/Epic.png`,
+  '3': `${PUBLIC_CLOUDFRONT_BASE_URL}icons/Legendary.png`,
+} as const;

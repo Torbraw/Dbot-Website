@@ -8,5 +8,6 @@
   "title": "Title",
   "name": "Name",
   "description": "Description",
-  "manaCost": "Mana Cost"
+  "manaCost": "Mana Cost",
+  "rarity": "Rarity"
 }
