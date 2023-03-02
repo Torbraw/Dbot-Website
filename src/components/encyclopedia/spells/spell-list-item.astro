@@ -3,16 +3,17 @@ const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
 export type Props = {
   name: string;
   description: string;
-  iconName: string;
+  iconName?: string;
   manaCost: string;
+  isHeader?: boolean;
 };
 
-const { name, manaCost, iconName, description } = Astro.props;
+const { name, manaCost, iconName = '', description, isHeader = false } = Astro.props;
 ---
 
 <div class="flex-auto basis-1/12 self-center text-left">
   {
-    iconName && (
+    !isHeader && (
       <img
         class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
         src={`${PUBLIC_CLOUDFRONT_BASE_URL}spells/${iconName}.png`}
@@ -22,8 +23,14 @@ const { name, manaCost, iconName, description } = Astro.props;
 </div>
 <div class="flex-auto basis-2/12 pl-2 text-left text-xs sm:text-sm lg:text-base">{name}</div>
 <div class="flex-auto basis-7/12 text-left text-xs sm:text-sm lg:text-base">{description}</div>
-<div class="hidden flex-initial basis-2/12 text-left text-xs sm:text-sm lg:block lg:text-base">
+<div class="hidden flex-initial basis-2/12 pl-2 text-left text-xs sm:text-sm lg:block lg:text-base">
   {manaCost}
-  &nbsp;
-  <img class="inline" width="24" height="24" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/Mana.png`} />
+  {
+    !isHeader && (
+      <>
+        &nbsp;
+        <img class="inline" width="24" height="24" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/Mana.png`} />
+      </>
+    )
+  }
 </div>

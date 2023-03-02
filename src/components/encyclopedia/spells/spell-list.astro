@@ -14,10 +14,10 @@ const { data } = Astro.props;
 
 <ListWrapper isHeader={true}>
   <SpellListItem
-    iconName=""
     name={t('encyclopedia:name', { lng: lang })}
     description={t('encyclopedia:description', { lng: lang })}
     manaCost={t('encyclopedia:manaCost', { lng: lang })}
+    isHeader={true}
   />
 </ListWrapper>
 {
