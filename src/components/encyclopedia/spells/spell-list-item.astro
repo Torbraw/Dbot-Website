@@ -23,7 +23,7 @@ const { name, manaCost, iconName = '', description, isHeader = false } = Astro.p
 </div>
 <div class="flex-auto basis-2/12 pl-2 text-left text-xs sm:text-sm lg:text-base">{name}</div>
 <div class="flex-auto basis-7/12 text-left text-xs sm:text-sm lg:text-base">{description}</div>
-<div class="hidden flex-initial basis-2/12 pl-2 text-left text-xs sm:text-sm lg:block lg:text-base">
+<div class="hidden flex-auto basis-1/12 pl-2 text-left text-xs sm:text-sm lg:text-base xl:block">
   {manaCost}
   {
     !isHeader && (
