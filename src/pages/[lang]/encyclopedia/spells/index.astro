@@ -1,0 +1,29 @@
+---
+import { t } from 'i18next';
+import type { EncyclopediaItemListResponse, Spell } from '../../../../types';
+import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
+import SpellListItem from '../../../../components/encyclopedia/spells/spell-list.astro';
+
+const { lang } = Astro.params;
+
+const url = new URL('/api/encyclopedia/spell/lists', Astro.site);
+const response = await fetch(url, {
+  headers: {
+    'content-type': 'application/json',
+  },
+});
+
+let data = null;
+if (response.status === 200) {
+  data = (await response.json()) as EncyclopediaItemListResponse<Spell>;
+}
+---
+
+{!data && <div>TODO Erreur</div>}
+{
+  data && (
+    <EncyclopediaListLayout title={t('encyclopedia:spells', { lng: lang })}>
+      <SpellListItem data={data} />
+    </EncyclopediaListLayout>
+  )
+}

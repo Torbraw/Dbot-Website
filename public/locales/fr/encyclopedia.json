@@ -6,5 +6,7 @@
   "achievements": "Succès",
   "questResources": "Ressources de quêtes",
   "title": "Titre",
-  "name": "Nom"
+  "name": "Nom",
+  "description": "Description",
+  "manaCost": "Coût en mana"
 }

@@ -1,0 +1,34 @@
+---
+import { t } from 'i18next';
+import type { Spell, EncyclopediaItemListResponse, StringI18n } from '../../../types';
+import ListWrapper from '../list-wrapper.astro';
+import SpellListItem from './spell-list-item.astro';
+
+export type Props = {
+  data: EncyclopediaItemListResponse<Spell>;
+};
+
+const { lang = 'en' } = Astro.params;
+const { data } = Astro.props;
+---
+
+<ListWrapper isHeader={true}>
+  <SpellListItem
+    iconName=""
+    name={t('encyclopedia:name', { lng: lang })}
+    description={t('encyclopedia:description', { lng: lang })}
+    manaCost={t('encyclopedia:manaCost', { lng: lang })}
+  />
+</ListWrapper>
+{
+  data.entries.map((e) => (
+    <ListWrapper>
+      <SpellListItem
+        name={e.name[lang as keyof StringI18n]}
+        description={e.description[lang as keyof StringI18n]}
+        manaCost={e.manaCost.toString()}
+        iconName={e.iconName}
+      />
+    </ListWrapper>
+  ))
+}

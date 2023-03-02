@@ -6,5 +6,7 @@
   "achievements": "Achievements",
   "questResources": "Quest Resources",
   "title": "Title",
-  "name": "Name"
+  "name": "Name",
+  "description": "Description",
+  "manaCost": "Mana Cost"
 }
