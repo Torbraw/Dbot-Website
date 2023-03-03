@@ -8,7 +8,7 @@ export async function get({ params, request }: APIContext): Promise<Response> {
   const token = url.searchParams.get('token') || '0';
 
   // Scan the redis database for the keys matching the type
-  const keys = await fetch(`${UPSTASH_REDIS_REST_URL}/SCAN/${token}/match/${type}:*/count/20`, {
+  const keys = await fetch(`${UPSTASH_REDIS_REST_URL}/SCAN/${token}/match/${type}:*/count/10`, {
     headers: {
       Authorization: UPSTASH_REDIS_REST_TOKEN,
       'content-type': 'application/json',
