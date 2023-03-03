@@ -29,14 +29,13 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
 <div class="hidden flex-auto basis-6/12 self-center text-left sm:block">
   {isHeader && <Trans key="encyclopedia:loots" />}
   {
-    loots &&
-      loots.map((loot) => (
-        // TODO Add tooltip of link to item detail
-        <img
-          class="inline h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-          src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${loot.type.toLowerCase()}/${loot.iconName}.png`}
-        />
-      ))
+    loots?.map((loot) => (
+      // TODO Add tooltip or link to item detail
+      <img
+        class="inline h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${loot.type.toLowerCase()}/${loot.iconName}.png`}
+      />
+    ))
   }
 </div>
 <div class="flex-initial basis-2/12 self-center text-left sm:basis-1/12">
