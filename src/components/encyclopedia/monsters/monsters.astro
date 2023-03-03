@@ -1,11 +1,11 @@
 ---
 import { t } from 'i18next';
-import type { EncyclopediaItemListResponse, StringI18n, Monster } from '../../../types';
+import type { EncyclopediaResponse, StringI18n, Monster } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
 import MonstersRow from './monsters-row.astro';
 
 export type Props = {
-  data: EncyclopediaItemListResponse<Monster>;
+  data: EncyclopediaResponse<Monster>;
 };
 
 const { lang = 'en' } = Astro.params;

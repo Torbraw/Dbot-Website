@@ -18,17 +18,13 @@ export type SidebarContent = { text: string; link: string };
 
 export type Sidebar = Record<string, Record<string, SidebarContent[]>>;
 
-export type EncyclopediaItemListResponse<T> = {
+export type EncyclopediaResponse<T> = {
   entries: T[];
   nextToken: string;
 };
 
 export type EncyclopediaTypeParams = {
   type: string;
-};
-
-export type EncyclopediaItemParams = EncyclopediaTypeParams & {
-  id: string;
 };
 
 export type UpstashResponse = {

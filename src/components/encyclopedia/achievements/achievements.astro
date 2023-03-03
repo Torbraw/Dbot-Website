@@ -1,11 +1,11 @@
 ---
 import { t } from 'i18next';
-import type { Achievement, EncyclopediaItemListResponse, StringI18n } from '../../../types';
+import type { Achievement, EncyclopediaResponse, StringI18n } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
 import AchievementsRow from './achievements-row.astro';
 
 export type Props = {
-  data: EncyclopediaItemListResponse<Achievement>;
+  data: EncyclopediaResponse<Achievement>;
 };
 
 const { lang = 'en' } = Astro.params;

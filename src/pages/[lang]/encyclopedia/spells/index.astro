@@ -1,6 +1,6 @@
 ---
 import { t } from 'i18next';
-import type { EncyclopediaItemListResponse, Spell } from '../../../../types';
+import type { EncyclopediaResponse, Spell } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Spells from '../../../../components/encyclopedia/spells/spells.astro';
 
@@ -15,7 +15,7 @@ const response = await fetch(url, {
 
 let data = null;
 if (response.status === 200) {
-  data = (await response.json()) as EncyclopediaItemListResponse<Spell>;
+  data = (await response.json()) as EncyclopediaResponse<Spell>;
 }
 ---
 

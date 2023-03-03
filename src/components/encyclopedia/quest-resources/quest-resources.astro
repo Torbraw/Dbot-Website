@@ -1,11 +1,11 @@
 ---
 import { t } from 'i18next';
-import type { EncyclopediaItemListResponse, StringI18n, QuestResource } from '../../../types';
+import type { EncyclopediaResponse, StringI18n, QuestResource } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
 import QuestResourcesRow from './quest-resources-row.astro';
 
 export type Props = {
-  data: EncyclopediaItemListResponse<QuestResource>;
+  data: EncyclopediaResponse<QuestResource>;
 };
 
 const { lang = 'en' } = Astro.params;
