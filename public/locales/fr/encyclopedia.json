@@ -10,5 +10,7 @@
   "description": "Description",
   "manaCost": "Coût en mana",
   "rarity": "Rareté",
-  "loots": "Butin"
+  "loots": "Butin",
+  "type": "Type",
+  "stats": "Statistiques"
 }

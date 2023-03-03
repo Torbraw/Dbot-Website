@@ -1,11 +1,11 @@
 ---
 import { t } from 'i18next';
-import type { EncyclopediaItemListResponse, StringI18n, QuestResource } from '../../../types';
+import type { EncyclopediaItemListResponse, StringI18n, Item } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
-import QuestResourceListItem from './quest-resource-list-item.astro';
+import ItemsRow from './items-row.astro';
 
 export type Props = {
-  data: EncyclopediaItemListResponse<QuestResource>;
+  data: EncyclopediaItemListResponse<Item>;
 };
 
 const { lang = 'en' } = Astro.params;
@@ -13,7 +13,8 @@ const { data } = Astro.props;
 ---
 
 <ListWrapper isHeader={true}>
-  <QuestResourceListItem
+  <ItemsRow
+    type={t('encyclopedia:type', { lng: lang })}
     name={t('encyclopedia:name', { lng: lang })}
     rarity={t('encyclopedia:rarity', { lng: lang })}
     isHeader={true}
@@ -22,7 +23,8 @@ const { data } = Astro.props;
 {
   data.entries.map((e) => (
     <ListWrapper>
-      <QuestResourceListItem
+      <ItemsRow
+        type={e.type}
         name={e.name[lang as keyof StringI18n]}
         rarity={e.rarity.toString()}
         iconName={e.iconName}

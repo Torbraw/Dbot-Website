@@ -2,7 +2,7 @@
 import { t } from 'i18next';
 import type { Spell, EncyclopediaItemListResponse, StringI18n } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
-import SpellListItem from './spell-list-item.astro';
+import SpellsRow from './spells-row.astro';
 
 export type Props = {
   data: EncyclopediaItemListResponse<Spell>;
@@ -13,7 +13,7 @@ const { data } = Astro.props;
 ---
 
 <ListWrapper isHeader={true}>
-  <SpellListItem
+  <SpellsRow
     name={t('encyclopedia:name', { lng: lang })}
     description={t('encyclopedia:description', { lng: lang })}
     manaCost={t('encyclopedia:manaCost', { lng: lang })}
@@ -23,7 +23,7 @@ const { data } = Astro.props;
 {
   data.entries.map((e) => (
     <ListWrapper>
-      <SpellListItem
+      <SpellsRow
         name={e.name[lang as keyof StringI18n]}
         description={e.description[lang as keyof StringI18n]}
         manaCost={e.manaCost.toString()}

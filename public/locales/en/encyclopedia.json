@@ -10,5 +10,7 @@
   "description": "Description",
   "manaCost": "Mana Cost",
   "rarity": "Rarity",
-  "loots": "Loots"
+  "loots": "Loots",
+  "type": "Type",
+  "stats": "Stats"
 }

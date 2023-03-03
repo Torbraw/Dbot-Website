@@ -1,8 +1,8 @@
 ---
 import { t } from 'i18next';
 import type { EncyclopediaItemListResponse, QuestResource } from '../../../../types';
-import EncyclopediaListLayout from '../../../../layouts/encyclopedia-list-layout.astro';
-import QuestResourceList from '../../../../components/encyclopedia/quest-resources/quest-resource-list.astro';
+import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
+import QuestResources from '../../../../components/encyclopedia/quest-resources/quest-resources.astro';
 
 const { lang } = Astro.params;
 
@@ -22,8 +22,8 @@ if (response.status === 200) {
 {!data && <div>TODO Erreur</div>}
 {
   data && (
-    <EncyclopediaListLayout title={t('encyclopedia:questResources', { lng: lang })}>
-      <QuestResourceList data={data} />
-    </EncyclopediaListLayout>
+    <EncyclopediaLayout title={t('encyclopedia:questResources', { lng: lang })}>
+      <QuestResources data={data} />
+    </EncyclopediaLayout>
   )
 }

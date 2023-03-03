@@ -2,7 +2,7 @@
 import { t } from 'i18next';
 import type { EncyclopediaItemListResponse, StringI18n, Monster } from '../../../types';
 import ListWrapper from '../list-wrapper.astro';
-import MonsterListItem from './monster-list-item.astro';
+import MonstersRow from './monsters-row.astro';
 
 export type Props = {
   data: EncyclopediaItemListResponse<Monster>;
@@ -13,7 +13,7 @@ const { data } = Astro.props;
 ---
 
 <ListWrapper isHeader={true}>
-  <MonsterListItem
+  <MonstersRow
     name={t('encyclopedia:name', { lng: lang })}
     rarity={t('encyclopedia:rarity', { lng: lang })}
     isHeader={true}
@@ -22,7 +22,7 @@ const { data } = Astro.props;
 {
   data.entries.map((e) => (
     <ListWrapper>
-      <MonsterListItem
+      <MonstersRow
         name={e.name[lang as keyof StringI18n]}
         rarity={e.rarity.toString()}
         iconName={e.iconName}
