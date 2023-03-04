@@ -20,6 +20,11 @@ if (response.status === 200) {
 }
 ---
 
+<span>
+  1:{t('encyclopedia:items')}
+  2:{t('pageTitle')}
+  3:{t('pageTitle', { lng: lang })}
+</span>
 {!data && <div>TODO Erreur</div>}
 {
   data && (
