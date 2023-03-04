@@ -1,10 +1,11 @@
 ---
-import { t } from 'i18next';
+import { t, changeLanguage } from 'i18next';
 import type { EncyclopediaResponse, Item } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Items from '../../../../components/encyclopedia/items/items.astro';
 
-const { lang } = Astro.params;
+const { lang = 'en' } = Astro.params;
+await changeLanguage(lang);
 
 const url = new URL('/api/encyclopedia/item/lists', Astro.site);
 const response = await fetch(url, {
