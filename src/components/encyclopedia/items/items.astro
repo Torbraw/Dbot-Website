@@ -28,6 +28,7 @@ const { data } = Astro.props;
         name={e.name[lang as keyof StringI18n]}
         rarity={e.rarity.toString()}
         iconName={e.iconName}
+        stats={e.stats}
       />
     </ListWrapper>
   ))
