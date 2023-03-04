@@ -1,0 +1,39 @@
+---
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  name: string;
+  description: string;
+  iconName?: string;
+  manaCost: string;
+  isHeader?: boolean;
+};
+
+const { name, manaCost, iconName = '', description, isHeader = false } = Astro.props;
+---
+
+<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
+  {
+    !isHeader && (
+      <img
+        class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/spells/${iconName}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-4/12 self-center text-left sm:basis-2/12">{name}</div>
+<div class="flex-auto basis-6/12 self-center text-left sm:basis-7/12">
+  {description}
+</div>
+<div class="hidden flex-auto self-center text-left sm:basis-1/12 lg:block">
+  {manaCost}
+  {
+    !isHeader && (
+      <>
+        &nbsp;
+        <img class="inline h-[32px] w-[32px]" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/Mana.png`} />
+      </>
+    )
+  }
+</div>

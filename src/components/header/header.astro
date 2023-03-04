@@ -16,7 +16,7 @@ const lang = Astro.params.lang || 'en';
 
 const navItems: Array<NavItem> = [
   { title: t('header:docs', { lng: lang }), url: `/${lang}/docs/introduction` },
-  { title: t('header:encyclopedia', { lng: lang }), url: `/${lang}/encyclopedia/intro` },
+  { title: t('header:encyclopedia', { lng: lang }), url: `/${lang}/encyclopedia` },
 ];
 ---
 
@@ -25,16 +25,16 @@ const navItems: Array<NavItem> = [
   class:list={[
     'z-20 flex w-full items-center justify-between border-b border-transparent p-4',
     { 'absolute bottom-0': !headerSticky },
-    { 'sticky top-0 bg-default': headerSticky },
+    { 'sticky top-0 bg-default !border-default': headerSticky },
   ]}
 >
   <Link href={`/${lang}`}>
-    <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-10 w-10" />
+    <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} class="h-10 w-10" />
   </Link>
   <div>
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-2 sm:gap-6">
       <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
+        <ul class="flex items-center gap-2 sm:gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
@@ -71,7 +71,7 @@ const navItems: Array<NavItem> = [
         </header>
         <div class="flex justify-center pb-4">
           <Link href="/">
-            <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}icons/BotIcon.png`} class="h-20 w-20" />
+            <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} class="h-20 w-20" />
           </Link>
         </div>
         <nav>

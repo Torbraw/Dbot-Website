@@ -1,0 +1,66 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../../layouts/base-layout.astro';
+import { t } from 'i18next';
+import GradientText from '../../../components/common/gradient-text.astro';
+import Trans from '../../../components/common/trans.astro';
+import Icon from 'astro-icon';
+import Link from '../../../components/common/link.astro';
+import { LANGUAGES } from '../../../config';
+
+export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+const { lang } = Astro.params;
+
+const encyclopediaItems = [
+  {
+    name: t('encyclopedia:items', { lng: lang }),
+    icon: 'ph:sword-light',
+    link: 'encyclopedia/items',
+  },
+  {
+    name: t('encyclopedia:spells', { lng: lang }),
+    icon: 'mdi:thunder-outline',
+    link: 'encyclopedia/spells',
+  },
+  {
+    name: t('encyclopedia:monsters', { lng: lang }),
+    icon: 'ph:alien-light',
+    link: 'encyclopedia/monsters',
+  },
+  {
+    name: t('encyclopedia:achievements', { lng: lang }),
+    icon: 'ph:trophy-light',
+    link: 'encyclopedia/achievements',
+  },
+  {
+    name: t('encyclopedia:questResources', { lng: lang }),
+    icon: 'ic:outline-water-drop',
+    link: 'encyclopedia/quest-resources',
+  },
+];
+---
+
+<BaseLayout headerSticky={true} title={t('encyclopedia:pageTitle', { lng: lang })}>
+  <main class="p-4 sm:p-8">
+    <section class="flex flex-col items-center gap-4 space-y-8">
+      <div>
+        <GradientText class="text-center text-4xl sm:text-7xl font-extrabold tracking-tight !leading-tight">
+          <Trans key="encyclopedia:pageTitle" />
+        </GradientText>
+      </div>
+      <div class="grid max-w-6xl grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        {
+          encyclopediaItems.map(({ name, icon, link }) => (
+            <Link href={link} class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+              <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                <Icon name={icon} />
+              </div>
+              <p class="text-md text-center font-extrabold sm:text-2xl">{name}</p>
+            </Link>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

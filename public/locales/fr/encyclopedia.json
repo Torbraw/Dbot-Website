@@ -1,0 +1,16 @@
+{
+  "pageTitle": "Encyclopedie",
+  "items": "Items",
+  "spells": "Sorts",
+  "monsters": "Monstres",
+  "achievements": "Succès",
+  "questResources": "Ressources de quêtes",
+  "title": "Titre",
+  "name": "Nom",
+  "description": "Description",
+  "manaCost": "Coût en mana",
+  "rarity": "Rareté",
+  "loots": "Butin",
+  "type": "Type",
+  "stats": "Statistiques"
+}
