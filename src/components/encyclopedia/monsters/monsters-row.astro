@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 import { RARITY_URLS } from '../../../config';
 import type { Item } from '../../../types';
 import Trans from '../../common/trans.astro';
@@ -46,7 +46,13 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
   {isHeader && rarity}
   {
     !isHeader && (
-      <Image height={42} width={36} alt={`rarity-${rarity}`} src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />
+      <Picture
+        widths={[24, 36]}
+        sizes="(min-width: 768px) 36px, 24px"
+        aspectRatio="6:7"
+        alt={`rarity-${rarity}`}
+        src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]}
+      />
     )
   }
 </div>
