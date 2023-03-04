@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config';
-import { loadEnv } from "vite";
-const {
-  SITE_URL
-} = loadEnv(import.meta.env.MODE, process.cwd(), "");
+import { loadEnv } from 'vite';
+const { SITE_URL } = loadEnv(import.meta.env.MODE, process.cwd(), '');
 
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind';
@@ -16,13 +14,19 @@ import astroI18next from 'astro-i18next';
 import solidJs from '@astrojs/solid-js';
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
   output: 'server',
-  integrations: [tailwind(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), astroI18next(), solidJs(), mdx()]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+    astroI18next(),
+    solidJs(),
+    mdx(),
+  ],
 });
