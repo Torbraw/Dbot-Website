@@ -6,9 +6,6 @@ const config: AstroI18nextConfig = {
   namespaces: ["index", "header", "footer", "404", "docs", "encyclopedia"],
   defaultNamespace: "index",
   i18nextServer: {
-    backend: {
-      loadPath: './public/locales/{{lng}}/{{ns}}.json',
-    },
     debug: true
   },
 };
