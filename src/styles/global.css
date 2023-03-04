@@ -45,7 +45,7 @@
 }
 
 .markdown img {
-  @apply w-[24px] h-[24px] inline-block;
+  @apply inline-block;
 }
 
 .markdown code {

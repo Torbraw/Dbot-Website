@@ -1,0 +1,42 @@
+---
+title: Items
+---
+import { Image } from '@astrojs/image/components';
+
+Items are the core of the game. They are used to boost your stats and give you a better chance of winning battles. They are four rarities of items: common <Image width="24" height="24" alt="common" src='https://d2lqwktucnc67y.cloudfront.net/icons/Common.png' />, rare <Image width="24" height="24" alt="rare" src='https://d2lqwktucnc67y.cloudfront.net/icons/Rare.png' />, epic <Image width="24" height="24" alt="epic" src='https://d2lqwktucnc67y.cloudfront.net/icons/Epic.png' /> and legendary <Image width="24" height="24" alt="legendary" src='https://d2lqwktucnc67y.cloudfront.net/icons/Legendary.png' />. The higher the rarity, the better the item is but also the harder it is to get.  
+You can see the items you have with the `/inventory` command and you can equip them with the `/equip-unequip` command.
+
+## Type of items
+
+They are 9 types of items:
+
+- <Image width="24" height="24" alt="weapon" src='https://d2lqwktucnc67y.cloudfront.net/icons/Weapon.png' /> **Weapon** - Given stats: <Image width="24" height="24" alt="attack" src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png' />
+- <Image width="24" height="24" alt="shield" src='https://d2lqwktucnc67y.cloudfront.net/icons/Shield.png' /> **Shield** - Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' />
+- <Image width="24" height="24" alt="helmet" src='https://d2lqwktucnc67y.cloudfront.net/icons/Helmet.png' /> **Helmet**- Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' />
+- <Image width="24" height="24" alt="amulet" src='https://d2lqwktucnc67y.cloudfront.net/icons/Amulet.png' /> **Amulet** - Given stats: <Image width="24" height="24" alt="mana" src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png' />
+- <Image width="24" height="24" alt="bracers" src='https://d2lqwktucnc67y.cloudfront.net/icons/Bracers.png' /> **Bracers** - Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' />
+- <Image width="24" height="24" alt="ring" src='https://d2lqwktucnc67y.cloudfront.net/icons/Ring.png' /> **Ring** - Given stats: <Image width="24" height="24" alt="mana" src='https://d2lqwktucnc67y.cloudfront.net/icons/Mana.png' />
+- <Image width="24" height="24" alt="chestplate" src='https://d2lqwktucnc67y.cloudfront.net/icons/Chestplate.png' /> **Chestplate** - Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' /> and <Image width="24" height="24" alt="attack" src='https://d2lqwktucnc67y.cloudfront.net/icons/Attack.png' />
+- <Image width="24" height="24" alt="pants" src='https://d2lqwktucnc67y.cloudfront.net/icons/Pants.png' /> **Pants** - Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' />
+- <Image width="24" height="24" alt="boots" src='https://d2lqwktucnc67y.cloudfront.net/icons/Boots.png' /> **Boots** - Given stats: <Image width="24" height="24" alt="health" src='https://d2lqwktucnc67y.cloudfront.net/icons/Health.png' />
+
+## Obtaining items
+
+- Play the `/slot` machine and hope to get lucky.
+- Buy items from the `/dbot-marketplace`.
+- Buy items from other players on the marketplace with the `/marketplace-action` command.
+- Trade items with other players with the `/trade-item` command.
+
+## Selling items
+
+You can sell items for a fixed price with the `/sell-item` or `/sell-items` command. Those commands will never sells items in your inventory. You can also sell items to other players on the marketplace with a price of your choice with the `/marketplace-action` command.
+
+## Difference between marketplace and dbot-marketplace
+
+The `/dbot-marketplace` is a marketplace where you can buy items (and spells) from the bot directly. The `/marketplace` is a place where you can buy and sells items with other players. The marketplace is not restricted to each server, it is a global marketplace.
+
+## Related commands
+
+- You can lock/unlock items with the `/lock-item` command. Lock items will not be sold when selling items with the `/sell-items` command. Locked items can still be sold with the `/sell-item` command or on the marketplace so be careful. Locked items will show a lock icon (🔒) in the inventory.
+- You can gift an item to another player with the `/gift-item` command.
+- To have info about a certain item, you can use the `/get-info` command or visit the [encyclopedia](/en/encyclopedia/items).

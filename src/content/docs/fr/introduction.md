@@ -11,4 +11,4 @@ Ensuite, vous pouvez commencer à jouer en utilisant n'importe quelle commande s
 ## Discord Communautaire
 
 Le discord communautaire est l'endroit où vous pouvez discuter avec d'autres joueurs, demander de l'aide, signaler un bug ou même donner des idées de nouvelles fonctionnalités. C'est également l'endroit où vous pouvez voir le changelog pour savoir ce qui a été ajouté ou modifié dans le bot.
-<iframe src="https://discord.com/widget?id=804521276877045820&theme=dark" class="w-full max-w-md h-[500px]" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<iframe src="https://discord.com/widget?id=804521276877045820&theme=dark" class="w-full max-w-md h-[500px]" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" />
