@@ -8,6 +8,7 @@ const links: Array<FooterLink> = [
   {
     url: PUBLIC_DBOT_DISCORD_LINK,
     icon: 'fa-brands:discord',
+    ariaLabel: 'Community Discord',
   },
 ];
 ---
@@ -20,11 +21,11 @@ const links: Array<FooterLink> = [
   <div class="flex justify-center gap-4">
     <ul>
       {
-        links.map((link) => (
+        links.map(({ ariaLabel, url, icon }) => (
           <li>
-            <Link class="flex rounded-full border-2 border-current p-2" href={link.url}>
+            <Link ariaLabel={ariaLabel} class="flex rounded-full border-2 border-current p-2" href={url}>
               <Fragment>
-                <Icon class="h-[24px] w-[24px]" name={link.icon} />
+                <Icon class="h-[24px] w-[24px]" name={icon} />
               </Fragment>
             </Link>
           </li>

@@ -44,6 +44,7 @@ export const LanguageSelect: Component = () => {
   return (
     <div>
       <button
+        aria-label="language-select"
         onClick={(): void => toggleDropdown()}
         class="h-[44px] w-[44px] cursor-pointer rounded-lg border-2 border-current bg-inherit p-2 hover:text-secondary-offset"
       >
@@ -64,6 +65,7 @@ export const LanguageSelect: Component = () => {
             {Object.keys(LANGUAGES).map((supportedLanguage: string) => (
               <div>
                 <button
+                  aria-label="language-option"
                   class="w-full cursor-pointer rounded-lg border-2 border-transparent py-2 px-4 text-left transition-colors duration-200 hover:bg-offset hover:text-secondary-offset"
                   onClick={(): void => handleSelect(supportedLanguage)}
                 >

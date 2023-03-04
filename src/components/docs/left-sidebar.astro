@@ -18,6 +18,7 @@ const sidebar = SIDEBAR[lang];
 
 <div class="h-[32] px-4 text-right">
   <button
+    aria-label="toggle-sidebar"
     type="button"
     class="transition-colors duration-200 hover:text-secondary-offset md:hidden"
     onclick="toggleLeftSidebar()"
@@ -50,6 +51,7 @@ const sidebar = SIDEBAR[lang];
                         { 'hover:text-secondary-offset hover:border-secondary-offset': !isActive },
                       ]}
                       href={url}
+                      aria-label={`sidebar link to ${child.text}`}
                     >
                       {child.text}
                     </a>

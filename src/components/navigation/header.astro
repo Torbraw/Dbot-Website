@@ -29,7 +29,7 @@ const navItems: Array<NavItem> = [
     { 'sticky top-0 bg-default !border-default': headerSticky },
   ]}
 >
-  <Link href={`/${lang}`}>
+  <Link ariaLabel="Home page" href={`/${lang}`}>
     <Image alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} width={48} height={48} />
   </Link>
   <div>
@@ -39,7 +39,7 @@ const navItems: Array<NavItem> = [
           {
             navItems.map(({ title, url }) => (
               <li>
-                <Link class="text-md" href={url}>
+                <Link ariaLabel={`Navigation to ${title}`} class="text-md" href={url}>
                   {title}
                 </Link>
               </li>
@@ -48,10 +48,17 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav>
       <LanguageSelect client:load />
-      <Link href={PUBLIC_INVITE_LINK} class="font-bold" isPrimary={true} isButton={true}>
+      <Link
+        ariaLabel="Discord invitation link"
+        href={PUBLIC_INVITE_LINK}
+        class="font-bold"
+        isPrimary={true}
+        isButton={true}
+      >
         <Trans key="header:addToServer" />
       </Link>
       <button
+        aria-label="mobile-toggle-open"
         type="button"
         class="transition-colors duration-200 hover:text-secondary-offset sm:hidden"
         onclick="toggleMobileMenu()"
@@ -63,6 +70,7 @@ const navItems: Array<NavItem> = [
       <div class="fixed inset-0 bg-default p-4 text-default">
         <header class="py-2 px-2 text-right">
           <button
+            aria-label="mobile-toggle-close"
             type="button"
             class="transition-colors duration-200 hover:text-secondary-offset"
             onclick="toggleMobileMenu()"
@@ -71,7 +79,7 @@ const navItems: Array<NavItem> = [
           </button>
         </header>
         <div class="flex justify-center pb-4">
-          <Link href="/">
+          <Link ariaLabel="Home page" href="/">
             <Image height={80} width={80} alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} />
           </Link>
         </div>
@@ -80,7 +88,7 @@ const navItems: Array<NavItem> = [
             {
               navItems.map(({ title, url }) => (
                 <li>
-                  <Link class="block py-4 text-center text-2xl" href={url}>
+                  <Link ariaLabel={`Navigation to ${title}`} class="block py-4 text-center text-2xl" href={url}>
                     {title}
                   </Link>
                 </li>

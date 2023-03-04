@@ -33,7 +33,13 @@ const { lang = 'en' } = Astro.params;
           </GradientText>
         </div>
         <div class="mt-8 text-center">
-          <Link isPrimary={true} isButton={true} href={`/${lang}`} class="text-2xl font-bold">
+          <Link
+            ariaLabel="Return to home"
+            isPrimary={true}
+            isButton={true}
+            href={`/${lang}`}
+            class="text-2xl font-bold"
+          >
             <Trans key="404:returnHome" />
           </Link>
         </div>

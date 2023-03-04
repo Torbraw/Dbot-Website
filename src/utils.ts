@@ -1,5 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
-import { SIDEBAR, Sidebar, SidebarContent } from './config';
+import { SIDEBAR } from './config';
+import type { Sidebar, SidebarContent } from './types';
 
 export function paginate(
   lang: keyof Sidebar,

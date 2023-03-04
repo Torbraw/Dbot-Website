@@ -12,6 +12,7 @@ export type FeatureItem = {
 export type FooterLink = {
   url: string;
   icon: string;
+  ariaLabel: string;
 };
 
 export type SidebarContent = { text: string; link: string };

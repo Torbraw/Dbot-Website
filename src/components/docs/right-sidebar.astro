@@ -15,7 +15,7 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
 <nav>
   <div>
     <h2 class="py-2 text-lg font-semibold" id="toc-heading">
-      <GradientText><Trans key="docs:onThisPage"/></GradientText>
+      <GradientText><Trans key="docs:onThisPage" /></GradientText>
     </h2>
     <ul class="mb-2 list-none">
       {
@@ -27,7 +27,7 @@ headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ 
                 depth * 2 - 2
               } border-l-2 p-1 hover:border-secondary-offset hover:bg-offset hover:text-secondary-offset`}
             >
-              <a class="block text-sm" href={`#${slug}`}>
+              <a class="block text-sm" href={`#${slug}`} aria-label={`on this page link to ${slug}`}>
                 {text}
               </a>
             </li>
