@@ -1,3 +1,5 @@
+// This file is used to import all the translations files and export them as a single object
+// Temporary solution until astro-i18next works in vercel serverless functions
 import indexFr from './locales/fr/index.json';
 import docsFr from './locales/fr/docs.json';
 import fourOhFourFr from './locales/fr/404.json';
