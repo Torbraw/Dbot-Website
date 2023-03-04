@@ -12,7 +12,7 @@ export type Props = {
 const { name, iconName = '', rarity, isHeader = false } = Astro.props;
 ---
 
-<div class="flex-auto basis-1/12 self-center text-left">
+<div class="flex-auto basis-3/12 self-center text-left sm:basis-1/12">
   {
     !isHeader && (
       <img
@@ -22,8 +22,8 @@ const { name, iconName = '', rarity, isHeader = false } = Astro.props;
     )
   }
 </div>
-<div class="flex-auto basis-2/12 self-center text-left">{name}</div>
-<div class="flex-initial basis-1/12 self-center text-left">
+<div class="flex-auto basis-6/12 self-center text-left sm:basis-2/12">{name}</div>
+<div class="flex-initial basis-3/12 self-center text-left sm:basis-1/12">
   {isHeader && rarity}
-  {!isHeader && <img class="h-[37px] w-[32px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+  {!isHeader && <img class="h-[42px] w-[36px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
 </div>

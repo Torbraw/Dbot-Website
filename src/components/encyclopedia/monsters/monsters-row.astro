@@ -25,8 +25,8 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
     )
   }
 </div>
-<div class="flex-auto basis-8/12 self-center text-left sm:basis-4/12">{name}</div>
-<div class="hidden flex-auto basis-6/12 self-center text-left sm:block">
+<div class="flex-auto basis-8/12 self-center text-left sm:basis-2/12">{name}</div>
+<div class="hidden flex-auto basis-4/12 self-center text-left sm:block">
   {isHeader && <Trans key="encyclopedia:loots" />}
   {
     loots?.map((loot) => (
@@ -38,7 +38,7 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
     ))
   }
 </div>
-<div class="flex-initial basis-2/12 self-center text-left sm:basis-1/12">
+<div class="flex-initial basis-3/12 self-center text-left sm:basis-1/12">
   {isHeader && rarity}
-  {!isHeader && <img class="h-[37px] w-[32px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+  {!isHeader && <img class="h-[42px] w-[36px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
 </div>
