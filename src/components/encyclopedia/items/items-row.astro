@@ -30,8 +30,8 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
     )
   }
 </div>
-<div class="flex-auto basis-3/12 self-center text-left text-sm sm:basis-2/12">{name}</div>
-<div class="flex-auto basis-3/12 self-center text-left text-sm sm:block sm:basis-2/12">
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:block sm:basis-2/12 md:text-base">
   {isHeader && type}
   {
     !isHeader && (
@@ -45,7 +45,7 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
     )
   }
 </div>
-<div class="flex-auto basis-3/12 self-center text-left text-sm">
+<div class="flex-auto basis-3/12 self-center text-left text-sm md:text-base">
   {isHeader && <Trans key="encyclopedia:stats" />}
   {
     !isHeader &&
@@ -66,7 +66,7 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
       ))
   }
 </div>
-<div class="flex-initial basis-2/12 self-center text-left text-sm sm:basis-1/12">
+<div class="flex-initial basis-2/12 self-center text-left text-sm sm:basis-1/12 md:text-base">
   {isHeader && rarity}
   {
     !isHeader && (
