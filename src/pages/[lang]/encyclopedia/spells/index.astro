@@ -4,7 +4,7 @@ import type { EncyclopediaResponse, Spell } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Spells from '../../../../components/encyclopedia/spells/spells.astro';
 
-const { lang } = Astro.params;
+const { lang = 'en' } = Astro.params;
 
 const url = new URL('/api/encyclopedia/spell/lists', Astro.site);
 const response = await fetch(url, {

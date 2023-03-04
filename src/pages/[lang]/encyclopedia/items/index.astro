@@ -5,6 +5,7 @@ import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Items from '../../../../components/encyclopedia/items/items.astro';
 
 const { lang } = Astro.params;
+console.log(lang);
 
 const url = new URL('/api/encyclopedia/item/lists', Astro.site);
 const response = await fetch(url, {
