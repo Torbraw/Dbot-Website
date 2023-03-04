@@ -1,11 +1,10 @@
 ---
-import { t, changeLanguage } from 'i18next';
+import { t } from 'i18next';
 import type { EncyclopediaResponse, Item } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Items from '../../../../components/encyclopedia/items/items.astro';
 
-const { lang = 'en' } = Astro.params;
-await changeLanguage(lang);
+const { lang } = Astro.params;
 
 const url = new URL('/api/encyclopedia/item/lists', Astro.site);
 const response = await fetch(url, {
@@ -20,11 +19,6 @@ if (response.status === 200) {
 }
 ---
 
-<span>
-  1:{t('encyclopedia:items')}
-  2:{t('pageTitle')}
-  3:{t('pageTitle', { lng: lang })}
-</span>
 {!data && <div>TODO Erreur</div>}
 {
   data && (
