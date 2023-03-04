@@ -16,7 +16,7 @@ export type Props = {
 const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
 ---
 
-<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
+<div class="flex-auto basis-3/12 self-center text-left sm:basis-1/12">
   {
     !isHeader && (
       <Picture
@@ -29,20 +29,26 @@ const { name, iconName = '', rarity, loots, isHeader = false } = Astro.props;
     )
   }
 </div>
-<div class="flex-auto basis-8/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
-<div class="hidden flex-auto basis-4/12 self-center text-left text-sm sm:block md:text-base">
+<div class="flex-auto basis-4/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:block sm:basis-6/12 md:text-base lg:basis-4/12">
   {isHeader && <Trans key="encyclopedia:loots" />}
   {
     loots?.map((loot) => (
       // TODO Add tooltip or link to item detail
-      <img
-        class="inline h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
-        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${loot.type.toLowerCase()}/${loot.iconName}.png`}
-      />
+      <div class="block md:inline md:pr-4">
+        <Picture
+          aspectRatio="1:1"
+          widths={[32, 48]}
+          sizes="(min-width: 768px) 48px, 32px"
+          class="inline"
+          alt={loot.type}
+          src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${loot.type.toLowerCase()}/${loot.iconName}.png`}
+        />
+      </div>
     ))
   }
 </div>
-<div class="flex-initial basis-3/12 self-center text-left text-sm sm:basis-1/12 md:text-base">
+<div class="flex-initial basis-2/12 self-center text-left text-sm sm:basis-1/12 md:text-base">
   {isHeader && rarity}
   {
     !isHeader && (
