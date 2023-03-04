@@ -13,4 +13,4 @@ You can use the `/help` command to get a list of all the commands available and 
 ## Community Discord
 
 The community discord is the place where you can talk with other players, ask for help, report bug or even give ideas for new features. This is also the place where you can see the changelog to know what has been added or changed in the bot.
-<iframe src="https://discord.com/widget?id=804521276877045820&theme=dark" class="w-full max-w-md h-[500px]" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" />
+<iframe title="Discord integration" src="https://discord.com/widget?id=804521276877045820&theme=dark" class="w-full max-w-md h-[500px]" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" />
