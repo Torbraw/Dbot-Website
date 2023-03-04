@@ -1,0 +1,82 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { RARITY_URLS } from '../../../config';
+import type { Stats } from '../../../types';
+import Trans from '../../common/trans.astro';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  name: string;
+  type: string;
+  iconName?: string;
+  stats?: Stats[];
+  rarity: string;
+  isHeader?: boolean;
+};
+
+const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.props;
+---
+
+<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
+  {
+    !isHeader && (
+      <Picture
+        aspectRatio="1:1"
+        widths={[48, 64]}
+        sizes="(min-width: 768px) 64px, 48px"
+        alt={iconName}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${type.toLowerCase()}/${iconName}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:block sm:basis-2/12 md:text-base">
+  {isHeader && type}
+  {
+    !isHeader && (
+      <Picture
+        aspectRatio="1:1"
+        widths={[32, 48]}
+        sizes="(min-width: 768px) 48px, 32px"
+        alt={type}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/${type.charAt(0).toUpperCase() + type.slice(1).toLowerCase()}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm md:text-base">
+  {isHeader && <Trans key="encyclopedia:stats" />}
+  {
+    !isHeader &&
+      stats?.map((stat) => (
+        <div class="block md:inline md:pr-4">
+          <span>{stat.value}</span>
+          <Picture
+            aspectRatio="1:1"
+            widths={[32, 48]}
+            sizes="(min-width: 768px) 48px, 32px"
+            alt={stat.type}
+            class="inline"
+            src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/${
+              stat.type.charAt(0).toUpperCase() + stat.type.slice(1).toLowerCase()
+            }.png`}
+          />
+        </div>
+      ))
+  }
+</div>
+<div class="flex-initial basis-2/12 self-center text-left text-sm sm:basis-1/12 md:text-base">
+  {isHeader && rarity}
+  {
+    !isHeader && (
+      <Picture
+        widths={[24, 36]}
+        sizes="(min-width: 768px) 36px, 24px"
+        aspectRatio="6:7"
+        alt={`rarity-${rarity}`}
+        src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]}
+      />
+    )
+  }
+</div>

@@ -1,0 +1,6 @@
+node_modules
+dist
+.eslintrc.js
+tailwind.config.cjs
+astro.config.mjs
+astro-i18next.config.ts

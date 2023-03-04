@@ -1,0 +1,124 @@
+---
+import type { NavItem } from '../../types';
+import { t } from 'i18next';
+import Link from '../common/link.astro';
+import Icon from 'astro-icon';
+import { Image } from '@astrojs/image/components';
+import { LanguageSelect } from './language-select';
+import Trans from '../common/trans.astro';
+const { PUBLIC_INVITE_LINK, PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  headerSticky: boolean;
+};
+
+const { headerSticky } = Astro.props;
+const lang = Astro.params.lang || 'en';
+
+const navItems: Array<NavItem> = [
+  { title: t('header:docs', { lng: lang }), url: `/${lang}/docs/introduction` },
+  { title: t('header:encyclopedia', { lng: lang }), url: `/${lang}/encyclopedia` },
+];
+---
+
+<header
+  id="page-header"
+  class:list={[
+    'z-20 flex w-full items-center justify-between border-b border-transparent p-4',
+    { 'absolute bottom-0': !headerSticky },
+    { 'sticky top-0 bg-default !border-default': headerSticky },
+  ]}
+>
+  <Link ariaLabel="Home page" href={`/${lang}`}>
+    <Image alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} width={48} height={48} />
+  </Link>
+  <div>
+    <div class="flex items-center gap-2 sm:gap-6">
+      <nav class="hidden sm:block">
+        <ul class="flex items-center gap-2 sm:gap-6">
+          {
+            navItems.map(({ title, url }) => (
+              <li>
+                <Link ariaLabel={`Navigation to ${title}`} class="text-md" href={url}>
+                  {title}
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <LanguageSelect client:load />
+      <Link
+        ariaLabel="Discord invitation link"
+        href={PUBLIC_INVITE_LINK}
+        class="font-bold"
+        isPrimary={true}
+        isButton={true}
+      >
+        <Trans key="header:addToServer" />
+      </Link>
+      <button
+        aria-label="mobile-toggle-open"
+        type="button"
+        class="transition-colors duration-200 hover:text-secondary-offset sm:hidden"
+        onclick="toggleMobileMenu()"
+      >
+        <Icon pack="mdi" name="menu" class="h-8" />
+      </button>
+    </div>
+    <div class="hidden" id="mobile-menu">
+      <div class="fixed inset-0 bg-default p-4 text-default">
+        <header class="py-2 px-2 text-right">
+          <button
+            aria-label="mobile-toggle-close"
+            type="button"
+            class="transition-colors duration-200 hover:text-secondary-offset"
+            onclick="toggleMobileMenu()"
+          >
+            <Icon pack="mdi" name="close" class="h-8" />
+          </button>
+        </header>
+        <div class="flex justify-center pb-4">
+          <Link ariaLabel="Home page" href="/">
+            <Image height={80} width={80} alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} />
+          </Link>
+        </div>
+        <nav>
+          <ul class="flex flex-col">
+            {
+              navItems.map(({ title, url }) => (
+                <li>
+                  <Link ariaLabel={`Navigation to ${title}`} class="block py-4 text-center text-2xl" href={url}>
+                    {title}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    document.documentElement.classList.toggle('mobile-sidebar-toggle');
+  }
+
+  const header = document.getElementById('page-header');
+  const page = document.documentElement;
+
+  document.addEventListener('scroll', () => {
+    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    if (!header.classList.contains('sticky')) {
+      if (d < 0) {
+        header.classList.add('!fixed', 'top-0', 'bottom-auto', '!border-default', 'bg-default');
+      } else {
+        header.classList.remove('!fixed', 'top-0', 'bottom-auto', '!border-default', 'bg-default');
+      }
+    }
+  });
+</script>

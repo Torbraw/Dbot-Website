@@ -1,0 +1,92 @@
+---
+import type { MarkdownHeading } from 'astro';
+import GradientText from '../common/gradient-text.astro';
+import Trans from '../common/trans.astro';
+
+export type Props = {
+  headings: MarkdownHeading[];
+  title: string;
+};
+
+let { headings, title } = Astro.props;
+headings = [{ depth: 2, slug: 'overview', text: title }, ...headings].filter(({ depth }) => depth > 1 && depth < 4);
+---
+
+<nav>
+  <div>
+    <h2 class="py-2 text-lg font-semibold" id="toc-heading">
+      <GradientText><Trans key="docs:onThisPage" /></GradientText>
+    </h2>
+    <ul class="mb-2 list-none">
+      {
+        headings.map((heading) => {
+          const { depth, slug, text } = heading;
+          return (
+            <li
+              class={`pl-${
+                depth * 2 - 2
+              } border-l-2 p-1 hover:border-secondary-offset hover:bg-offset hover:text-secondary-offset`}
+            >
+              <a class="block text-sm" href={`#${slug}`} aria-label={`on this page link to ${slug}`}>
+                {text}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  // Toggle classes when items are in view
+  document.querySelectorAll('article :is(h1,h2,h3)').forEach((h) => {
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          const tocItem = document.querySelector(`a[href="#${id}"]`);
+          // this occurs when the id = "toc-heading"
+          if (!tocItem) return;
+
+          if (entry.isIntersecting) {
+            // get current all parent active elements
+            const currentActiveParentElements = Array.from(
+              document.querySelectorAll(`[data-current-active-parent-tab-content-item="true"]`),
+            );
+
+            if (currentActiveParentElements.length) {
+              // loop through all parent elements and remove class and attribute
+              for (const parentEl of currentActiveParentElements) {
+                parentEl.classList.remove(
+                  'border-primary',
+                  'text-primary',
+                  'bg-offset',
+                  'hover:border-primary-offset',
+                  'hover:text-primary-offset',
+                );
+                parentEl.classList.add('hover:border-secondary-offset', 'hover:text-secondary-offset');
+                parentEl.removeAttribute('data-current-active-parent-tab-content-item');
+              }
+            }
+
+            // add class and attribute to current parent element
+            tocItem.parentElement.classList.add(
+              'border-primary',
+              'text-primary',
+              'bg-offset',
+              'hover:border-primary-offset',
+              'hover:text-primary-offset',
+            );
+            tocItem.parentElement.classList.remove('hover:border-secondary-offset', 'hover:text-secondary-offset');
+            tocItem.parentElement.setAttribute('data-current-active-parent-tab-content-item', true);
+          }
+        });
+      },
+      {
+        rootMargin: '-70px 0% -66%',
+        threshold: 1,
+      },
+    ).observe(h);
+  });
+</script>

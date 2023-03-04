@@ -1,0 +1,49 @@
+---
+export const prerender = true;
+
+import { t } from 'i18next';
+import { LANGUAGES } from '../../config';
+import BaseLayout from '../../layouts/base-layout.astro';
+import GradientText from '../../components/common/gradient-text.astro';
+import Link from '../../components/common/link.astro';
+import Trans from '../../components/common/trans.astro';
+import { Picture } from '@astrojs/image/components';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+const { lang = 'en' } = Astro.params;
+---
+
+<BaseLayout title={t('404:title', { lng: lang })} showHeader={false}>
+  <section class="relative h-screen bg-offset">
+    <div class="grid h-full place-items-center">
+      <h2 class="flex flex-col gap-2 sm:gap-4">
+        <div class="grid place-items-center">
+          <Picture
+            alt="icon"
+            aspectRatio="1:1"
+            widths={[96, 128]}
+            sizes="(min-width: 640px) 128px, 96px"
+            src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`}
+          />
+        </div>
+        <div class="text-center text-7xl font-extrabold tracking-tighter text-primary sm:text-8xl">
+          <GradientText>
+            <Trans key="404:notFound" />
+          </GradientText>
+        </div>
+        <div class="mt-8 text-center">
+          <Link
+            ariaLabel="Return to home"
+            isPrimary={true}
+            isButton={true}
+            href={`/${lang}`}
+            class="text-2xl font-bold"
+          >
+            <Trans key="404:returnHome" />
+          </Link>
+        </div>
+      </h2>
+    </div>
+  </section>
+</BaseLayout>

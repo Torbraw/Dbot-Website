@@ -1,0 +1,14 @@
+---
+import { t } from 'i18next';
+import Trans from '../common/trans.astro';
+
+import ContentSection from './content-section.astro';
+
+const lang = Astro.params.lang || 'en';
+---
+
+<ContentSection title={t('intro.title', { lng: lang })}>
+  <Fragment slot="main">
+    <Trans key="intro.desc"><span class="text-primary"></span></Trans>
+  </Fragment>
+</ContentSection>

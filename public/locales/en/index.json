@@ -1,0 +1,37 @@
+{
+  "pageTitle": "Dbot - RPG Discord Bot",
+  "title": "RPG. <0> Discord. <1> Bot.",
+  "intro": {
+    "title": "Fun and simple",
+    "desc": "A simple <0>RPG</0> style game on discord that is constantly <0>evolving</0>. All the <0>base mechanics</0> you expect and more."
+  },
+  "features": {
+    "title": "Features",
+    "desc": "Dbot is packed with <0>functionalities</0>. You can <0>hunt a monster</0> to have a chance to get his <0>loot</0> or even fight the strongests in a <0>PVP battle</0>.",
+    "seeDocs": "See full documentation →",
+    "items": {
+      "title": "Items",
+      "desc": "Items can be obtained in the slot machine, dropped from monster, bought in the marketplace or even crafted."
+    },
+    "pve": {
+      "title": "PVE",
+      "desc": "Hunt down monsters with other players to have a chance to gain their loots and more."
+    },
+    "pvp": {
+      "title": "PVP",
+      "desc": "Fight a combat to death with your weapon and your spells versus another player to gain currencies and fame."
+    },
+    "quests": {
+      "title": "Quests",
+        "desc": "Embark on different quests when you have some free time to gain some useful resources to craft items."
+      },
+    "enchantments": {
+      "title": "Enchantments",
+      "desc": "Trade some enchant gems to have the ability to enchant your items to boost their statistics."
+    },
+    "achievements": {
+      "title": "Achievements",
+      "desc": "Each action in your adventure can give you some achievement and sometime some titles."
+    }
+  }
+}

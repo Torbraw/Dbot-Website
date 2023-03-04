@@ -1,0 +1,33 @@
+---
+import { t } from 'i18next';
+import type { EncyclopediaResponse, StringI18n, Monster } from '../../../types';
+import ListWrapper from '../list-wrapper.astro';
+import MonstersRow from './monsters-row.astro';
+
+export type Props = {
+  data: EncyclopediaResponse<Monster>;
+};
+
+const { lang = 'en' } = Astro.params;
+const { data } = Astro.props;
+---
+
+<ListWrapper isHeader={true}>
+  <MonstersRow
+    name={t('encyclopedia:name', { lng: lang })}
+    rarity={t('encyclopedia:rarity', { lng: lang })}
+    isHeader={true}
+  />
+</ListWrapper>
+{
+  data.entries.map((e) => (
+    <ListWrapper>
+      <MonstersRow
+        name={e.name[lang as keyof StringI18n]}
+        rarity={e.rarity.toString()}
+        iconName={e.iconName}
+        loots={e.loots}
+      />
+    </ListWrapper>
+  ))
+}

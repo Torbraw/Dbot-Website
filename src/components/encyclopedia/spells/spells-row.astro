@@ -1,0 +1,49 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
+
+export type Props = {
+  name: string;
+  description: string;
+  iconName?: string;
+  manaCost: string;
+  isHeader?: boolean;
+};
+
+const { name, manaCost, iconName = '', description, isHeader = false } = Astro.props;
+---
+
+<div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
+  {
+    !isHeader && (
+      <Picture
+        aspectRatio="1:1"
+        widths={[48, 64]}
+        sizes="(min-width: 768px) 64px, 48px"
+        alt={iconName}
+        src={`${PUBLIC_CLOUDFRONT_BASE_URL}/spells/${iconName}.png`}
+      />
+    )
+  }
+</div>
+<div class="flex-auto basis-4/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
+<div class="flex-auto basis-6/12 self-center text-left text-sm sm:basis-7/12 md:text-base">
+  {description}
+</div>
+<div class="hidden flex-auto self-center text-left text-sm sm:basis-1/12 md:text-base lg:block">
+  {manaCost}
+  {
+    !isHeader && (
+      <>
+        &nbsp;
+        <Image
+          height={32}
+          width={32}
+          alt="mana-icon"
+          class="inline"
+          src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/Mana.png`}
+        />
+      </>
+    )
+  }
+</div>

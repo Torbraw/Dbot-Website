@@ -1,0 +1,16 @@
+{
+  "pageTitle": "Encyclopedia",
+  "items": "Items",
+  "spells": "Spells",
+  "monsters": "Monsters",
+  "achievements": "Achievements",
+  "questResources": "Quest Resources",
+  "title": "Title",
+  "name": "Name",
+  "description": "Description",
+  "manaCost": "Mana Cost",
+  "rarity": "Rarity",
+  "loots": "Loots",
+  "type": "Type",
+  "stats": "Stats"
+}

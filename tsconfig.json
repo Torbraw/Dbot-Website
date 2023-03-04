@@ -1,0 +1,16 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.astro",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".eslintrc.js"
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
+}

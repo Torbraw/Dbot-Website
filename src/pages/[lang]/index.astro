@@ -1,0 +1,23 @@
+---
+export const prerender = true;
+
+import { t } from 'i18next';
+import { LANGUAGES } from '../../config';
+import Footer from '../../components/navigation/footer.astro';
+import Features from '../../components/index/features.astro';
+import Intro from '../../components/index/intro.astro';
+import TitleScreen from '../../components/index/title-screen.astro';
+import BaseLayout from '../../layouts/base-layout.astro';
+
+export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
+const { lang } = Astro.params;
+---
+
+<BaseLayout title={t('pageTitle', { lng: lang })}>
+  <TitleScreen />
+  <div class="space-y-24 px-8 py-32">
+    <Intro />
+    <Features />
+  </div>
+</BaseLayout>
+<Footer />

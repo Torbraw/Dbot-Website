@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon';
+import { paginate } from '../../utils';
+import Link from '../common/link.astro';
+
+export type Props = {
+  currentPage: string;
+};
+
+const { currentPage } = Astro.props;
+const lang = Astro.params.lang || 'en';
+
+const hasTrailing = currentPage.endsWith('/');
+const currentPageMatch = currentPage.slice(1, hasTrailing ? -1 : currentPage.length);
+const { next, prev } = paginate(lang, currentPageMatch);
+---
+
+<div class="my-8 flex w-full flex-row items-center justify-between font-medium">
+  <div class="min-w-0 flex-1">
+    {
+      prev ? (
+        <Link ariaLabel={`Previous page ${prev.text}`} href={(Astro.site?.pathname || '') + prev.link}>
+          <Icon pack="ic" name="baseline-chevron-left" class="inline h-8" />
+          {prev.text}
+        </Link>
+      ) : null
+    }
+  </div>
+  <div class="min-w-0 flex-1 text-right">
+    {
+      next ? (
+        <Link ariaLabel={`Next page ${next.text}`} href={(Astro.site?.pathname || '') + next.link}>
+          {next.text}
+          <Icon pack="ic" name="baseline-chevron-right" class="inline h-8" />
+        </Link>
+      ) : null
+    }
+  </div>
+</div>

@@ -1,0 +1,43 @@
+---
+import '../styles/index.css';
+import Header from '../components/navigation/header.astro';
+import { HeadHrefLangs } from 'astro-i18next/components';
+
+export type Props = {
+  title: string;
+  headerSticky?: boolean;
+  showHeader?: boolean;
+};
+
+const { title, headerSticky = false, showHeader = true } = Astro.props;
+const lang = Astro.params.lang || 'en';
+---
+
+<!DOCTYPE html>
+<html class="dbot-scrollbar h-full bg-offset motion-safe:scroll-smooth" data-theme="dark" lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <HeadHrefLangs />
+  </head>
+  <body class="min-h-screen bg-default text-base text-default">
+    {showHeader && <Header headerSticky={headerSticky} />}
+    <slot />
+  </body>
+</html>
