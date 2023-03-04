@@ -30,19 +30,22 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
     )
   }
 </div>
-<div class="flex-auto basis-2/12 self-center text-left sm:basis-2/12">{name}</div>
-<div class="hidden flex-auto basis-6/12 self-center text-left sm:block sm:basis-2/12">
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:basis-2/12">{name}</div>
+<div class="flex-auto basis-3/12 self-center text-left text-sm sm:block sm:basis-2/12">
   {isHeader && type}
   {
     !isHeader && (
-      <img
-        class="h-[48px] w-[48px]"
+      <Picture
+        aspectRatio="1:1"
+        widths={[32, 48]}
+        sizes="(min-width: 768px) 48px, 32px"
+        alt={type}
         src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/${type.charAt(0).toUpperCase() + type.slice(1).toLowerCase()}.png`}
       />
     )
   }
 </div>
-<div class="flex-auto basis-3/12 self-center text-left">
+<div class="flex-auto basis-3/12 self-center text-left text-sm">
   {isHeader && <Trans key="encyclopedia:stats" />}
   {
     !isHeader &&
@@ -63,7 +66,7 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
       ))
   }
 </div>
-<div class="flex-initial basis-2/12 self-center text-left sm:basis-1/12">
+<div class="flex-initial basis-2/12 self-center text-left text-sm sm:basis-1/12">
   {isHeader && rarity}
   {
     !isHeader && (
