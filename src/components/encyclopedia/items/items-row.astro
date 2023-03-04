@@ -1,4 +1,5 @@
 ---
+import { Image, Picture } from '@astrojs/image/components';
 import { RARITY_URLS } from '../../../config';
 import type { Stats } from '../../../types';
 import Trans from '../../common/trans.astro';
@@ -19,8 +20,11 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
 <div class="flex-auto basis-2/12 self-center text-left sm:basis-1/12">
   {
     !isHeader && (
-      <img
-        class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+      <Picture
+        aspectRatio="1:1"
+        widths={[48, 64]}
+        sizes="(min-width: 768px) 64px, 48px"
+        alt={iconName}
         src={`${PUBLIC_CLOUDFRONT_BASE_URL}/${type.toLowerCase()}/${iconName}.png`}
       />
     )
@@ -45,8 +49,12 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
       stats?.map((stat) => (
         <div class="block md:inline md:pr-4">
           <span>{stat.value}</span>
-          <img
-            class="inline h-[48px] w-[48px]"
+          <Picture
+            aspectRatio="1:1"
+            widths={[32, 48]}
+            sizes="(min-width: 768px) 48px, 32px"
+            alt={stat.type}
+            class="inline"
             src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/${
               stat.type.charAt(0).toUpperCase() + stat.type.slice(1).toLowerCase()
             }.png`}
@@ -57,5 +65,9 @@ const { name, iconName = '', rarity, type, stats, isHeader = false } = Astro.pro
 </div>
 <div class="flex-initial basis-2/12 self-center text-left sm:basis-1/12">
   {isHeader && rarity}
-  {!isHeader && <img class="h-[42px] w-[36px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+  {
+    !isHeader && (
+      <Image height={42} width={36} alt={`rarity-${rarity}`} src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />
+    )
+  }
 </div>

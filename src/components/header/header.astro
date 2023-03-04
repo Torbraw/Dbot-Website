@@ -3,6 +3,7 @@ import type { NavItem } from '../../types';
 import { t } from 'i18next';
 import Link from '../common/link.astro';
 import Icon from 'astro-icon';
+import { Image } from '@astrojs/image/components';
 import { LanguageSelect } from './language-select';
 import Trans from '../common/trans.astro';
 const { PUBLIC_INVITE_LINK, PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
@@ -29,7 +30,7 @@ const navItems: Array<NavItem> = [
   ]}
 >
   <Link href={`/${lang}`}>
-    <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} class="h-10 w-10" />
+    <Image alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} width={48} height={48} />
   </Link>
   <div>
     <div class="flex items-center gap-2 sm:gap-6">
@@ -71,7 +72,7 @@ const navItems: Array<NavItem> = [
         </header>
         <div class="flex justify-center pb-4">
           <Link href="/">
-            <img alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} class="h-20 w-20" />
+            <Image height={80} width={80} alt="icon" src={`${PUBLIC_CLOUDFRONT_BASE_URL}/icons/BotIcon.png`} />
           </Link>
         </div>
         <nav>

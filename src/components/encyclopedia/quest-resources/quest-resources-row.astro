@@ -1,4 +1,5 @@
 ---
+import { Image, Picture } from '@astrojs/image/components';
 import { RARITY_URLS } from '../../../config';
 const { PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
 
@@ -15,8 +16,11 @@ const { name, iconName = '', rarity, isHeader = false } = Astro.props;
 <div class="flex-auto basis-3/12 self-center text-left sm:basis-1/12">
   {
     !isHeader && (
-      <img
-        class="h-[32px] w-[32px] lg:h-[64px] lg:w-[64px]"
+      <Picture
+        aspectRatio="1:1"
+        widths={[48, 64]}
+        sizes="(min-width: 768px) 64px, 48px"
+        alt={iconName}
         src={`${PUBLIC_CLOUDFRONT_BASE_URL}/quest-resources/${iconName}.png`}
       />
     )
@@ -25,5 +29,9 @@ const { name, iconName = '', rarity, isHeader = false } = Astro.props;
 <div class="flex-auto basis-6/12 self-center text-left sm:basis-2/12">{name}</div>
 <div class="flex-initial basis-3/12 self-center text-left sm:basis-1/12">
   {isHeader && rarity}
-  {!isHeader && <img class="h-[42px] w-[36px]" src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />}
+  {
+    !isHeader && (
+      <Image height={42} width={36} alt={`rarity-${rarity}`} src={RARITY_URLS[rarity as keyof typeof RARITY_URLS]} />
+    )
+  }
 </div>
