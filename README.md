@@ -1,3 +1,3 @@
 # Dbot-Website
 
-This is the website for the Dbot project.
+This is the website for the Dbot Discord bot.
