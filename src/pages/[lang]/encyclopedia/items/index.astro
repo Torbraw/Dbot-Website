@@ -3,9 +3,7 @@ import { t } from 'i18next';
 import type { EncyclopediaResponse, Item } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Items from '../../../../components/encyclopedia/items/items.astro';
-import { LANGUAGES } from '../../../../config';
 
-export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
 const { lang } = Astro.params;
 
 const url = new URL('/api/encyclopedia/item/lists', Astro.site);

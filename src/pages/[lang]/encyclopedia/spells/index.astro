@@ -3,9 +3,7 @@ import { t } from 'i18next';
 import type { EncyclopediaResponse, Spell } from '../../../../types';
 import EncyclopediaLayout from '../../../../layouts/encyclopedia-layout.astro';
 import Spells from '../../../../components/encyclopedia/spells/spells.astro';
-import { LANGUAGES } from '../../../../config';
 
-export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
 const { lang } = Astro.params;
 
 const url = new URL('/api/encyclopedia/spell/lists', Astro.site);
