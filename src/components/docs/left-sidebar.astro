@@ -3,9 +3,9 @@ import { Icon } from 'astro-icon';
 import { SIDEBAR } from '../../config';
 import GradientText from '../common/gradient-text.astro';
 
-export interface Props {
+export type Props = {
   currentPage: string;
-}
+};
 
 const { currentPage } = Astro.props;
 const lang = Astro.params.lang || 'en';

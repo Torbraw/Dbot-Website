@@ -8,6 +8,7 @@ import Trans from '../../../components/common/trans.astro';
 import Icon from 'astro-icon';
 import Link from '../../../components/common/link.astro';
 import { LANGUAGES } from '../../../config';
+import Footer from '../../../components/navigation/footer.astro';
 
 export const getStaticPaths = () => Object.keys(LANGUAGES).map((lang) => ({ params: { lang } }));
 const { lang } = Astro.params;
@@ -67,4 +68,5 @@ const encyclopediaItems = [
       </div>
     </section>
   </main>
+  <Footer fixed={true} />
 </BaseLayout>

@@ -7,10 +7,10 @@ import RightSidebar from '../components/docs/right-sidebar.astro';
 import Footer from '../components/navigation/footer.astro';
 import BaseLayout from './base-layout.astro';
 
-export interface Props {
+export type Props = {
   content: CollectionEntry<'docs'>['data'];
   headings: MarkdownHeading[];
-}
+};
 
 const { content, headings } = Astro.props;
 const { title } = Astro.props.content;

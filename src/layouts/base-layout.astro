@@ -3,11 +3,11 @@ import '../styles/index.css';
 import Header from '../components/navigation/header.astro';
 import { HeadHrefLangs } from 'astro-i18next/components';
 
-export interface Props {
+export type Props = {
   title: string;
   headerSticky?: boolean;
   showHeader?: boolean;
-}
+};
 
 const { title, headerSticky = false, showHeader = true } = Astro.props;
 const lang = Astro.params.lang || 'en';

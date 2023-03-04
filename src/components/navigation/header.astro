@@ -8,9 +8,9 @@ import { LanguageSelect } from './language-select';
 import Trans from '../common/trans.astro';
 const { PUBLIC_INVITE_LINK, PUBLIC_CLOUDFRONT_BASE_URL } = import.meta.env;
 
-export interface Props {
+export type Props = {
   headerSticky: boolean;
-}
+};
 
 const { headerSticky } = Astro.props;
 const lang = Astro.params.lang || 'en';

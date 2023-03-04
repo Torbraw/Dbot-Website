@@ -4,10 +4,10 @@ import type { CollectionEntry } from 'astro:content';
 import GradientText from '../common/gradient-text.astro';
 import Pagination from './pagination.astro';
 
-export interface Props {
+export type Props = {
   content: CollectionEntry<'docs'>['data'];
   currentPage: string;
-}
+};
 
 const { content, currentPage } = Astro.props;
 const title = content.title;

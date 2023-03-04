@@ -14,9 +14,9 @@ export async function getStaticPaths() {
   });
 }
 
-export interface Props {
+export type Props = {
   entry: CollectionEntry<'docs'>;
-}
+};
 
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();

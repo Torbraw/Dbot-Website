@@ -3,9 +3,9 @@ import { Icon } from 'astro-icon';
 import { paginate } from '../../utils';
 import Link from '../common/link.astro';
 
-export interface Props {
+export type Props = {
   currentPage: string;
-}
+};
 
 const { currentPage } = Astro.props;
 const lang = Astro.params.lang || 'en';
