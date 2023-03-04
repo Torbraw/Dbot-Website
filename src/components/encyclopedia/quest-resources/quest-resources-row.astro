@@ -26,8 +26,8 @@ const { name, iconName = '', rarity, isHeader = false } = Astro.props;
     )
   }
 </div>
-<div class="flex-auto basis-6/12 self-center text-left sm:basis-2/12">{name}</div>
-<div class="flex-initial basis-3/12 self-center text-left sm:basis-1/12">
+<div class="flex-auto basis-6/12 self-center text-left text-sm sm:basis-2/12 md:text-base">{name}</div>
+<div class="flex-initial basis-3/12 self-center text-left text-sm sm:basis-1/12 md:text-base">
   {isHeader && rarity}
   {
     !isHeader && (
