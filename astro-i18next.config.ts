@@ -5,6 +5,9 @@ const config: AstroI18nextConfig = {
   locales:['fr', 'en'],
   namespaces: ["index", "header", "footer", "404", "docs", "encyclopedia"],
   defaultNamespace: "index",
+  i18nextServer: {
+    debug: true,
+  },
 };
 
 export default config;
