@@ -22,8 +22,7 @@
     "astro-icon": "^0.8.0",
     "i18next": "^22.4.10",
     "sharp": "^0.31.3",
-    "solid-js": "^1.6.11",
-    "tailwindcss": "^3.2.7"
+    "solid-js": "^1.6.11"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.42.1",
@@ -35,6 +34,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.7.0",
-    "prettier-plugin-tailwindcss": "^0.2.1"
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.7"
   }
 }
