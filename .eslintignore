@@ -4,3 +4,4 @@ dist
 tailwind.config.cjs
 astro.config.mjs
 astro-i18next.config.ts
+public
